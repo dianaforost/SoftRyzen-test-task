@@ -13,6 +13,8 @@ module.exports = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         buttonBg:
           "linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1))",
+        headerBg:
+          "linear-gradient(180deg, #001826 0%, rgba(0, 37, 49, 0) 100%)",
       },
       screens: {
         xs: "320px",

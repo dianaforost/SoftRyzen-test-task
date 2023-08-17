@@ -90,12 +90,12 @@ body {
 }
 .container {
   max-width: 280px;
-  margin: 0 auto;
+  /* margin: 0 auto; */
 }
 .header {
   color: #fff;
   /* min-height: 34px; */
-  background: linear-gradient(180deg, #001826 0%, rgba(0, 37, 49, 0) 100%);
+  /* background: linear-gradient(180deg, #001826 0%, rgba(0, 37, 49, 0) 100%); */
 }
 .sec-section {
   width: 100%;
@@ -120,9 +120,6 @@ body {
 }
 .title {
   font-weight: 500;
-}
-.cont {
-  order: -1;
 }
 @media screen and (min-width: 768px) {
   .cont {
