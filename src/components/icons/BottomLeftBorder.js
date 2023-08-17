@@ -1,5 +1,4 @@
 export default function TopLeftBorder({ className }) {
-  console.log(className);
   return (
     <svg
       className={className}
