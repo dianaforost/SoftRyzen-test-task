@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@import "../styles/fonts.css";
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -15,7 +15,7 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
-
+/* 
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -24,4 +24,110 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+} */
+body {
+  font-family: "Inter", sans-serif;
+}
+.hero-section {
+  width: 100%;
+  max-width: 100%;
+  height: 100dvh;
+  background-image: url("../../public/img/mobile-firstBg1x.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  /* background-size: auto 100%; */
+  /* background-size: contain; */
+  /* object-fit: cover; */
+  /* background-size: cover; */
+}
+.div {
+  width: 100%;
+  height: 100%;
+  background: #020f0880;
+}
+.container {
+  max-width: 280px;
+  margin: 0 auto;
+}
+.header {
+  color: #fff;
+  /* min-height: 34px; */
+  background: linear-gradient(180deg, #001826 0%, rgba(0, 37, 49, 0) 100%);
+}
+.sec-section {
+  width: 100%;
+  min-height: 100vh;
+  /* height: 100dvh; */
+  background-image: url("../../public/img/secBg1x.jpg");
+  background-size: cover; /* Растягивает картинку, чтобы она покрыла всю площадь фона */
+  background-repeat: no-repeat; /* Запрещает повторение картинки по горизонтали и вертикали */
+  background-attachment: fixed;
+}
+.third-section {
+  width: 100%;
+  min-height: 100vh;
+  /* height: 100dvh; */
+  background-image: url("../../public/img/thirdBg1x.jpg");
+  background-size: cover; /* Растягивает картинку, чтобы она покрыла всю площадь фона */
+  background-repeat: no-repeat; /* Запрещает повторение картинки по горизонтали и вертикали */
+  background-attachment: fixed;
+}
+.text {
+  font-weight: 100;
+}
+.title {
+  font-weight: 500;
+}
+.cont {
+  order: -1;
+}
+@media screen and (min-width: 768px) {
+  .cont {
+    order: 0;
+  }
+}
+.menu-button {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+}
+.logo {
+  font-family: "Karantina", sans-serif;
+  font-size: 14px;
+  line-height: 14px;
+}
+.class {
+  background: #010a05bf;
+
+  /* transform: translateX(0); */
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(15px);
+  transform: translateX(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.class.isOpen {
+  transform: translateX(0);
+}
+.close-button {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0.1em;
+
+  position: absolute;
+  right: 20px;
+}
+.link {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0.1em;
 }
