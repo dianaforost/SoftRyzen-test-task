@@ -5,13 +5,13 @@ import BurgerMenu from "../BurgerMenu/BurgerMenu";
 export default function Header() {
   return (
     <header className="header pt-[36px] md:bg-headerBg">
-      <div className="container flex justify-between mx-[auto] my-[0]">
+      <div className="container md:px-[15px] flex justify-between mx-[auto] my-[0]">
         <a href="#">
           <Image src="/img/Log.png" alt="Logo" width={59} height={21}></Image>
           <p className="logo">CarpTravel</p>
         </a>
         <nav className="sm:block hidden">
-          <ul className="flex flex-row gap-14">
+          <ul className="flex flex-row gap-14 sm:text-[14px] sm:leading-[17px] sm:tracking-[0.1em]">
             <li>
               <a href="#about">About</a>
             </li>

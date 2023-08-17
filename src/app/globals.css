@@ -15,16 +15,6 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
-/* 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-} */
 body {
   font-family: "Inter", sans-serif;
 }
@@ -36,10 +26,6 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  /* background-size: auto 100%; */
-  /* background-size: contain; */
-  /* object-fit: cover; */
-  /* background-size: cover; */
 }
 @media screen and (min-width: 320px) {
   @media only screen and (-webkit-min-device-pixel-ratio: 2),
@@ -94,25 +80,21 @@ body {
 }
 .header {
   color: #fff;
-  /* min-height: 34px; */
-  /* background: linear-gradient(180deg, #001826 0%, rgba(0, 37, 49, 0) 100%); */
 }
 .sec-section {
   width: 100%;
   min-height: 100vh;
-  /* height: 100dvh; */
   background-image: url("../../public/img/secBg1x.jpg");
-  background-size: cover; /* Растягивает картинку, чтобы она покрыла всю площадь фона */
-  background-repeat: no-repeat; /* Запрещает повторение картинки по горизонтали и вертикали */
+  background-size: cover;
+  background-repeat: no-repeat;
   background-attachment: fixed;
 }
 .third-section {
   width: 100%;
   min-height: 100vh;
-  /* height: 100dvh; */
   background-image: url("../../public/img/thirdBg1x.jpg");
-  background-size: cover; /* Растягивает картинку, чтобы она покрыла всю площадь фона */
-  background-repeat: no-repeat; /* Запрещает повторение картинки по горизонтали и вертикали */
+  background-size: cover;
+  background-repeat: no-repeat;
   background-attachment: fixed;
 }
 .text {
@@ -132,6 +114,11 @@ body {
     max-width: 704px;
   }
 }
+@media screen and (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
 .menu-button {
   font-family: "Inter", sans-serif;
   font-size: 14px;
@@ -145,7 +132,6 @@ body {
 .class {
   background: #010a05bf;
 
-  /* transform: translateX(0); */
   position: fixed;
   width: 100vw;
   height: 100vh;
