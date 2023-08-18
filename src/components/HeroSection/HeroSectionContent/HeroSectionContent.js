@@ -28,7 +28,7 @@ export default function HeroSectionContent() {
             jouney
           </span>
         </h2>
-        <div className="flex flex-col gap-[24px]">
+        <div className="flex flex-col gap-[24px] sm:gap-[28px]">
           <p className="text-white font-extralight text-[14px] leading-[20px] pt-[24px] text-justify sm:text-[16px] w-[280px] sm:w-[230px] md:w-[294px] md:text-[18px] md:leading-[24px]">
             We offer you unforgettable trips to the most beautiful parts of the
             Carpathians. Enjoy stunning views, exciting expeditions, and the

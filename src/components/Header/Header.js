@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import BurgerMenu from "../BurgerMenu/BurgerMenu";
+import { Link } from "react-scroll";
 
 export default function Header() {
   return (
@@ -13,19 +14,59 @@ export default function Header() {
         <nav className="sm:block hidden">
           <ul className="flex flex-row gap-14 sm:text-[14px] sm:leading-[17px] sm:tracking-[0.1em]">
             <li>
-              <a href="#about">About</a>
+              <Link
+                to="about"
+                spy={true}
+                smooth={true}
+                duration={500}
+                activeClass="active"
+              >
+                About
+              </Link>
             </li>
             <li>
-              <a href="#services">Services</a>
+              <Link
+                to="services"
+                spy={true}
+                smooth={true}
+                duration={500}
+                activeClass="active"
+              >
+                Services
+              </Link>
             </li>
             <li>
-              <a href="#career">Career</a>
+              <Link
+                to="career"
+                spy={true}
+                smooth={true}
+                duration={700}
+                activeClass="active"
+              >
+                Career
+              </Link>
             </li>
             <li>
-              <a href="#gallery">Gallery</a>
+              <Link
+                to="gallery"
+                spy={true}
+                smooth={true}
+                duration={700}
+                activeClass="active"
+              >
+                Gallery
+              </Link>
             </li>
             <li>
-              <a href="#contacts">Contacts</a>
+              <Link
+                to="contacts"
+                spy={true}
+                smooth={true}
+                duration={700}
+                activeClass="active"
+              >
+                Contacts
+              </Link>
             </li>
           </ul>
         </nav>

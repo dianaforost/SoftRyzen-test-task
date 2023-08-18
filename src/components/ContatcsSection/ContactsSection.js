@@ -1,6 +1,6 @@
-export default function ServicesSection() {
+export default function ContactsSection() {
   return (
-    <section className="third-section" id="services">
+    <section className="sixth-section" id="contacts">
       <div className="div">
         <div className="container md:gap-[281px] md:px-[15px] flex flex-col relative pt-[80px] sm:mt-[0] mx-[auto] mb-[0] sm:flex-row sm:gap-[48px] sm:pt-[66px]">
           <h1>Hello</h1>
