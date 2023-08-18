@@ -6,7 +6,7 @@ import { Link } from "react-scroll";
 export default function Header() {
   return (
     <header className="header pt-[36px] md:bg-headerBg">
-      <div className="container md:px-[15px] flex justify-between mx-[auto] my-[0]">
+      <div className="container md:px-[15px] flex justify-between mx-[auto] my-[0] max-w-[280px] md:max-w-[1280px] sm:max-w-[704px]">
         <a href="#">
           <Image src="/img/Log.png" alt="Logo" width={59} height={21}></Image>
           <p className="logo">CarpTravel</p>
