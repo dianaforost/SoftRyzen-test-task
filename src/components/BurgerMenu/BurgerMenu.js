@@ -35,27 +35,31 @@ export default function BurgerMenu() {
           <nav className="flex justify-center items-center h-[100dvh]">
             <ul className="flex flex-col gap-14 items-center">
               <li>
-                <a href="#about" className="link font-normal">
+                <a
+                  href="#about"
+                  className="link font-normal"
+                  onClick={toggleMenu}
+                >
                   About
                 </a>
               </li>
               <li>
-                <a href="#services" className="link">
+                <a href="#services" className="link" onClick={toggleMenu}>
                   Services
                 </a>
               </li>
               <li>
-                <a href="#career" className="link">
+                <a href="#career" className="link" onClick={toggleMenu}>
                   Career
                 </a>
               </li>
               <li>
-                <a href="#gallery" className="link">
+                <a href="#gallery" className="link" onClick={toggleMenu}>
                   Gallery
                 </a>
               </li>
               <li>
-                <a href="#contacts" className="link">
+                <a href="#contacts" className="link" onClick={toggleMenu}>
                   Contacts
                 </a>
               </li>
