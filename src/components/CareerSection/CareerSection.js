@@ -1,8 +1,19 @@
+"use client";
 import PhoneInput from "../PhoneInput/PhoneInput";
 import CheckBox from "../icons/CheckBox";
+import CrossIcon from "../icons/CrossIcon";
 import Icon from "../icons/Icon";
+import { useForm } from "react-hook-form";
 
 export default function CareerSection() {
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm({
+    mode: "onChange",
+  });
   const whyUsList = [
     {
       id: "1item",
@@ -25,6 +36,7 @@ export default function CareerSection() {
       text: "Unleash your potential through unforgettable projects showcasing Carpathian beauty.",
     },
   ];
+  const onSubmit = (data) => console.log(data);
   return (
     <section className="fourth-section" id="career">
       <div className="div relative bg-[#020F08BF]">
@@ -60,27 +72,80 @@ export default function CareerSection() {
                 Don`t miss your opportunity! Fill out the form right now and
                 join our team!
               </p>
-              <form className="sm:flex-row flex flex-col gap-[16px] sm:gap-[20px]">
+              <form
+                className="sm:flex-row flex flex-col gap-[16px] sm:gap-[20px]"
+                onSubmit={handleSubmit(onSubmit)}
+              >
                 <div className="sm:flex flex flex-col gap-[16px] sm:w-[222px] md:gap-[24px] md:w-[290px]">
-                  <div className="flex flex-col gap-[4px]">
-                    <label className=" text-[12px] leading-[24px] font-extralight tracking-[0.2em] ">
+                  <div className="flex flex-col gap-[4px] relative sm:sticky">
+                    <label
+                      className={`${
+                        errors.fullName ? "text-red-500" : ""
+                      } text-[12px] leading-[24px] font-extralight tracking-[0.2em] `}
+                    >
                       Full name
                     </label>
                     <input
                       type="text"
                       placeholder="John Smith"
-                      className="bg-[#FFFFFF0D] pr-[5px] md:py-[2px] md:text-[20px] md:leading-[24px] text-[13px] leading-[24px] font-extralight pl-[8px] focus:bg-[#FFFFFF1A] focus:outline-none"
+                      {...register("fullName", {
+                        required: true,
+                        minLength: 2,
+                      })}
+                      className={`${
+                        errors.fullName ? "text-red-500" : ""
+                      } bg-[#FFFFFF0D] pr-[5px] md:py-[2px] md:text-[20px] md:leading-[24px] text-[13px] leading-[24px] font-extralight pl-[8px] focus:bg-[#FFFFFF1A] focus:outline-none`}
                     ></input>
+                    {errors.fullName && (
+                      <>
+                        <CrossIcon
+                          className={
+                            "absolute top-[57px] left-[149px] sm:left-[91px] md:top-[59px] md:left-[157px]"
+                          }
+                          width={18}
+                          height={18}
+                        />
+                        <span className="right-[0] top-[50px] text-[#FF5757] pl-[19px] md:right-[0] absolute md:top-[53px] text-[12px] leading-[24px] font-extralight tracking-[0.2em]">
+                          Incorrect name
+                        </span>
+                      </>
+                    )}
                   </div>
-                  <div className="flex flex-col gap-[4px]">
-                    <label className=" text-[12px] leading-[24px] font-extralight tracking-[0.2em]">
+                  <div className="flex flex-col gap-[4px] relative sm:sticky">
+                    <label
+                      className={`${
+                        errors.email ? "text-red-500" : ""
+                      }  text-[12px] leading-[24px] font-extralight tracking-[0.2em]`}
+                    >
                       E-mail
                     </label>
                     <input
                       type="email"
                       placeholder="johnsmith@email.com"
-                      className="bg-[#FFFFFF0D] pr-[5px] md:py-[2px] md:text-[20px] md:leading-[24px] text-[13px] leading-[24px] font-extralight pl-[8px] focus:bg-[#FFFFFF1A] focus:outline-none"
+                      {...register("email", {
+                        required: true,
+                        minLength: 2,
+                        pattern:
+                          /([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})/i,
+                      })}
+                      className={`${
+                        errors.email ? "text-red-500" : ""
+                      } bg-[#FFFFFF0D] pr-[5px] md:py-[2px] md:text-[20px] md:leading-[24px] text-[13px] leading-[24px] font-extralight pl-[8px] focus:bg-[#FFFFFF1A] focus:outline-none`}
                     ></input>
+                    {errors.email && (
+                      <>
+                        <CrossIcon
+                          className={
+                            "absolute top-[57px] left-[165px] sm:left-[109px] md:top-[59px] md:left-[176px]"
+                          }
+                          width={18}
+                          height={18}
+                        />
+                        <span className="right-[0] top-[50px] text-[#FF5757] absolute md:right-[0] md:pl-[19px] md:top-[53px] text-[12px] leading-[24px] font-extralight tracking-[0.2em]">
+                          Invalid email
+                        </span>
+                      </>
+                    )}
                   </div>
                   <div className="flex flex-col gap-[4px]">
                     <label className=" text-[12px] leading-[24px] font-extralight tracking-[0.2em]">
@@ -89,30 +154,55 @@ export default function CareerSection() {
                     <input
                       type="text"
                       placeholder="Movie maker"
+                      {...register("position", {})}
                       className="bg-[#FFFFFF0D] pr-[5px] md:py-[2px] md:text-[20px] md:leading-[24px] text-[13px] leading-[24px] font-extralight pl-[8px] focus:bg-[#FFFFFF1A] focus:outline-none"
                     ></input>
                   </div>
-                  <div className="flex flex-col gap-[4px]">
-                    <label className=" text-[12px] leading-[24px] font-extralight tracking-[0.2em]">
+                  <div className="flex flex-col gap-[4px] relative sm:sticky">
+                    <label
+                      className={`${
+                        errors.tel ? "text-red-500" : ""
+                      } text-[12px] leading-[24px] font-extralight tracking-[0.2em]`}
+                    >
                       Phone
                     </label>
                     <input
                       type="tel"
                       placeholder="(097) 12 34 567"
-                      // onChange={handlePhoneInput}
-                      className="phone-input bg-[#FFFFFF0D] pr-[5px] md:py-[2px] md:text-[20px] md:leading-[24px] text-[13px] leading-[24px] font-extralight pl-[60px] focus:bg-[#FFFFFF1A] focus:outline-none"
+                      {...register("tel", {
+                        required: true,
+                        minLength: 10,
+                        maxLength: 12,
+                      })}
+                      className={`${
+                        errors.tel ? "text-red-500" : ""
+                      } bg-[#FFFFFF0D] pl-[48px] pr-[5px] md:py-[2px] md:text-[20px] md:leading-[24px] text-[13px] leading-[24px] font-extralight md:pl-[60px] focus:bg-[#FFFFFF1A] focus:outline-none`}
                     ></input>
+                    {errors.tel && (
+                      <>
+                        <CrossIcon
+                          className={
+                            "absolute top-[57px] left-[139px] sm:left-[84px] md:top-[59px] md:left-[150px]"
+                          }
+                          width={18}
+                          height={18}
+                        />
+                        <span className="right-[0] top-[50px] text-[#FF5757] md:right-[0] absolute md:top-[53px] text-[12px] leading-[24px] font-extralight tracking-[0.2em]">
+                          Incorrect phone
+                        </span>
+                      </>
+                    )}
                     {/* <PhoneInput
                       className={
                         "phone-input bg-[#FFFFFF0D] pr-[5px] md:py-[2px] md:text-[20px] md:leading-[24px] text-[13px] leading-[24px] font-extralight pl-[60px] focus:bg-[#FFFFFF1A] focus:outline-none"
                       }
                     /> */}
-                    <span className="absolute bottom-[47px] left-[8px] md:text-[20px] md:leading-[24px] text-[13px] leading-[24px] font-extralight">
+                    <span className="bottom-[0] absolute md:bottom-[2px] left-[8px] md:text-[20px] md:leading-[24px] text-[13px] leading-[24px] font-extralight">
                       + 38
                     </span>
                   </div>
                 </div>
-                <div className="sm:w-[221px]">
+                <div className="sm:w-[221px] flex flex-col">
                   <div className="flex flex-col gap-[4px]">
                     <label className="text-[12px] leading-[24px] font-extralight tracking-[0.2em]">
                       Message
@@ -122,7 +212,7 @@ export default function CareerSection() {
                       rows={8}
                     ></textarea>
                   </div>
-                  <div className="flex flex-row gap-[4px] relative mb-[16px] sm:absolute sm:top-[355px] sm:left-[-5px] sm:w-[222px] sm:top-[357px] sm:mb-[0] md:top-[418px] md:w-[258px]">
+                  <div className="flex flex-row gap-[4px] top-[16px] relative mb-[16px] sm:absolute sm:top-[355px] sm:left-[-5px] sm:w-[222px] sm:top-[357px] sm:mb-[0] md:top-[418px] md:w-[258px]">
                     <input
                       className="w-[1px] h-[1px]"
                       type="checkbox"
@@ -140,7 +230,7 @@ export default function CareerSection() {
                     </label>
                   </div>
                   <button
-                    className="uppercase text-[30px] font-medium leading-[36px] text-end sm:flex sm:ml-[auto]"
+                    className="self-end uppercase text-[30px] font-medium leading-[36px] text-end sm:flex sm:ml-[auto]"
                     type="submit"
                   >
                     Send
