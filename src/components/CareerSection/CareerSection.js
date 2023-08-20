@@ -4,15 +4,19 @@ import CheckBox from "../icons/CheckBox";
 import CrossIcon from "../icons/CrossIcon";
 import Icon from "../icons/Icon";
 import { useForm } from "react-hook-form";
+import InputMask from "react-input-mask";
 
 export default function CareerSection() {
   const {
     register,
     handleSubmit,
-    watch,
+    reset,
     formState: { errors },
   } = useForm({
     mode: "onChange",
+    defaultValues: {
+      tel: "",
+    },
   });
   const whyUsList = [
     {
@@ -36,7 +40,10 @@ export default function CareerSection() {
       text: "Unleash your potential through unforgettable projects showcasing Carpathian beauty.",
     },
   ];
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    console.log(data);
+    reset();
+  };
   return (
     <section className="fourth-section" id="career">
       <div className="div relative bg-[#020F08BF]">
@@ -166,18 +173,20 @@ export default function CareerSection() {
                     >
                       Phone
                     </label>
-                    <input
+                    <InputMask
+                      mask="(999) 99 99 999"
+                      maskChar={null}
                       type="tel"
+                      id="tel"
                       placeholder="(097) 12 34 567"
                       {...register("tel", {
                         required: true,
-                        minLength: 10,
-                        maxLength: 12,
+                        minLength: 15,
                       })}
                       className={`${
                         errors.tel ? "text-red-500" : ""
                       } bg-[#FFFFFF0D] pl-[48px] pr-[5px] md:py-[2px] md:text-[20px] md:leading-[24px] text-[13px] leading-[24px] font-extralight md:pl-[60px] focus:bg-[#FFFFFF1A] focus:outline-none`}
-                    ></input>
+                    />
                     {errors.tel && (
                       <>
                         <CrossIcon
@@ -192,11 +201,6 @@ export default function CareerSection() {
                         </span>
                       </>
                     )}
-                    {/* <PhoneInput
-                      className={
-                        "phone-input bg-[#FFFFFF0D] pr-[5px] md:py-[2px] md:text-[20px] md:leading-[24px] text-[13px] leading-[24px] font-extralight pl-[60px] focus:bg-[#FFFFFF1A] focus:outline-none"
-                      }
-                    /> */}
                     <span className="bottom-[0] absolute md:bottom-[2px] left-[8px] md:text-[20px] md:leading-[24px] text-[13px] leading-[24px] font-extralight">
                       + 38
                     </span>
