@@ -1,53 +1,12 @@
+"use client";
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { EffectFade, Navigation, Pagination } from "swiper/modules";
 import Image from "next/image";
-import firstSlider from "../../../public/img/photo/big-first-slider.jpg";
-import secondSlider from "../../../public/img/photo/second-slider.jpg";
-import thirdSlider from "../../../public/img/photo/third-slider.jpg";
-import fourthSlider from "../../../public/img/photo/fourth-slider.jpg";
-import fifthSlider from "../../../public/img/photo/fifth-slider.jpg";
 import "swiper/css/effect-fade";
 
-const sliderData = [
-  {
-    date: "01/05",
-    image: firstSlider,
-    text: "Feel the adrenaline rush",
-    description:
-      "Join exciting rafting expeditions on the waterways of the Carpathians. Go through challenging waterways and overcome gusty waves, feel the adrenaline, and enjoy the incredible views of the surrounding mountains.",
-  },
-  {
-    date: "02/05",
-    image: secondSlider,
-    text: "Destroy your limitations",
-    description:
-      "Overcome the peaks of the Carpathians in a unique way - climbing. Make your own way to the heights and find inner peace in the embrace of the mighty rocks.",
-  },
-  {
-    date: "03/05",
-    image: thirdSlider,
-    text: "Get Inspired",
-    description:
-      "Feel Zen over the mountain peaks! Hot air ballooning gives you incredible impressions and panoramas of the Carpathians that seem endless.",
-  },
-  {
-    date: "04/05",
-    image: fourthSlider,
-    text: "Overcome your fears",
-    description:
-      "Fly in the sky over the Carpathians! Experienced instructors will help you realize your dream of free flight. Remember the incredible emotions and panoramas from a bird's eye view forever.",
-  },
-  {
-    date: "05/05",
-    image: fifthSlider,
-    text: "Trust the flow",
-    description:
-      "Join exciting rafting expeditions on the waterways of the Carpathians. Go through challenging waterways and overcome gusty waves, feel the adrenaline, and enjoy the incredible views of the surrounding mountains.",
-  },
-];
 const swiperBullets = [
   "ATVs Traveling",
   "Rock climbing",
@@ -55,31 +14,39 @@ const swiperBullets = [
   "Skydiving",
   "Rafting",
 ];
-
-export default function SwiperSlider() {
+export default function SwiperSlider({ handleSlideChange, sliderData }) {
   const swiperParams = {
     spaceBetween: "20px",
     effect: "fade",
-    // crossFade: true,
-    modules: [Navigation, Pagination],
+    fadeEffect: {
+      crossFade: true,
+    },
+    modules: [Navigation, Pagination, EffectFade],
     pagination: {
       clickable: true,
       renderBullet: function (index, className) {
         return `<span class="${className}">${swiperBullets[index]}</span>`;
+      },
+      on: {
+        slideChange: function (swiper) {
+          handleSlideChange(swiper.realIndex);
+        },
       },
     },
   };
 
   return (
     <div className="swiper-container h-[100dvh]">
-      <Swiper {...swiperParams}>
+      <Swiper
+        {...swiperParams}
+        onSlideChange={(swiper) => {
+          handleSlideChange(swiper.realIndex);
+        }}
+      >
         {sliderData.map((slide, index) => {
           const [month, day] = slide.date.split("/");
           return (
-            <SwiperSlide
-              key={index}
-              style={{ backgroundImage: `url(${slide.image})` }}
-            >
+            <SwiperSlide key={index}>
               <div className="swiper-content h-[100dvh]">
                 <p className="text-[43px] font-thin text-[#FFFFFF33] text-end mb-[16px] sm:text-[67px] sm:leading-[78px] sm:top-[-140px] sm:absolute sm:right-[0]">
                   <span className="font-extralight text-white">{month}/</span>
