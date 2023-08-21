@@ -41,7 +41,7 @@ export default function HeroSectionContent() {
             spy={true}
             smooth={true}
             duration={700}
-            className="text-center uppercase text-white font-bold text-[18px] leading-[48px] bg-buttonBg w-[100%] relative sm:leading-[22px] sm:py-[14px] md:py-[16px] md:text-[32px] md:leading-[39px]"
+            className="text-center uppercase text-white font-bold text-[18px] leading-[48px] bg-buttonBg w-[100%] relative sm:leading-[22px] sm:py-[14px] md:py-[16px] md:text-[32px] md:leading-[39px] hover:bg-[#FFFFFF33] cursor-pointer"
             activeClass="active"
           >
             Join now
