@@ -281,7 +281,7 @@ body {
   line-height: 22px;
   letter-spacing: 0.1em;
 }
-div.container .swiper-container .swiper .swiper-pagination {
+.third-section div.container .swiper-container .swiper .swiper-pagination {
   font-size: 20px;
   line-height: 17px;
   top: 350px;
@@ -289,7 +289,7 @@ div.container .swiper-container .swiper .swiper-pagination {
   height: 166px;
   text-align: inherit;
 }
-.swiper-pagination .swiper-pagination-bullet {
+.third-section .swiper-pagination .swiper-pagination-bullet {
   font-weight: 200;
   display: inline;
   background-color: transparent;
@@ -298,16 +298,10 @@ div.container .swiper-container .swiper .swiper-pagination {
   position: relative;
   padding-left: 16px;
 }
-.swiper-pagination .swiper-pagination-bullet-active {
+.third-section .swiper-pagination .swiper-pagination-bullet-active {
   font-weight: 500;
 }
-/* .swiper-pagination .swiper-pagination-bullet:hover {
-  font-weight: 200;
-}
-.swiper-pagination .swiper-pagination-bullet-active:hover {
-  font-weight: 500;
-} */
-.swiper-pagination-bullet-active::before {
+.third-section .swiper-pagination-bullet-active::before {
   content: "";
   position: absolute;
   top: 10px;
@@ -319,15 +313,21 @@ div.container .swiper-container .swiper .swiper-pagination {
   border-color: white;
   transform: rotate(45deg);
 }
-.swiper-container .swiper {
+.third-section .swiper-container .swiper {
   position: sticky;
   overflow-y: visible;
 }
-.swiper-container .swiper .swiper-wrapper {
+.third-section .swiper-container .swiper .swiper-wrapper {
   position: sticky;
 }
-.swiper-wrapper .swiper-slide {
+.third-section .swiper-wrapper .swiper-slide {
   position: sticky;
+}
+@media screen and (min-width: 320px) {
+  /* .fifth-section .swiper .swiper-wrapper {
+    flex-direction: column;
+    gap: 24px;
+  } */
 }
 @media screen and (min-width: 768px) {
   .fourth-section {
@@ -335,31 +335,55 @@ div.container .swiper-container .swiper .swiper-pagination {
     background-size: cover;
     background-repeat: no-repeat;
   }
-  div.container .swiper-container .swiper .swiper-pagination {
+  .third-section div.container .swiper-container .swiper .swiper-pagination {
     top: 0;
     left: auto;
     right: -483px;
     text-transform: uppercase;
     gap: 16px;
   }
-  .swiper-pagination .swiper-pagination-bullet {
+  .third-section .swiper-pagination .swiper-pagination-bullet {
     font-size: 22px;
     line-height: 18px;
     width: 202px;
   }
+  .fifth-section .swiper-3d .swiper-slide-shadow-left,
+  .fifth-section .swiper-3d .swiper-slide-shadow-right {
+    height: 294px;
+    background-image: linear-gradient(
+      to left,
+      rgba(0, 0, 0, 0.729),
+      rgba(0, 0, 0, 0.462)
+    );
+  }
+  .swiper-slide img {
+    display: block;
+    width: 415px;
+  }
 }
 @media screen and (min-width: 1280px) {
-  div.container .swiper-container .swiper .swiper-pagination {
+  .third-section div.container .swiper-container .swiper .swiper-pagination {
     top: 0;
     left: auto;
     right: -627px;
     text-transform: uppercase;
     gap: 16px;
   }
-  .swiper-pagination .swiper-pagination-bullet {
+  .third-section .swiper-pagination .swiper-pagination-bullet {
     font-size: 22px;
     line-height: 18px;
     width: 202px;
+  }
+  .fifth-section .swiper-3d .swiper-slide-shadow-left,
+  .fifth-section .swiper-3d .swiper-slide-shadow-right {
+    height: 429px;
+  }
+
+  .fifth-section .swiper-3d .swiper-slide-prev img {
+    margin-right: 0;
+  }
+  .fifth-section .swiper-3d .swiper-slide-next img {
+    display: inline-block;
   }
 }
 #checkbox {
@@ -386,6 +410,28 @@ div.container .swiper-container .swiper .swiper-pagination {
 #checkbox:checked + .checkbox-icon {
   opacity: 1;
 }
-.phone-input {
-  color: #fff; /* Белый текст */
+.fifth-section div.container .swiper-container .swiper .swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.fifth-section .div div.container .swiper {
+  height: 100vh;
+}
+
+.fifth-section .container .swiper {
+  width: 100%;
+}
+.fifth-section div.container .swiper-button-next::after,
+.fifth-section div.container .swiper-button-prev::after {
+  content: "";
+}
+.fifth-section div.container .swiper-button-next,
+.fifth-section div.container .swiper-button-prev {
+  color: #fff;
+}
+.fifth-section .swiper-button-next,
+.fifth-section .swiper-button-prev {
+  top: 702px;
 }

@@ -58,7 +58,7 @@ const swiperBullets = [
 export default function SwiperSlider() {
   const swiperParams = {
     spaceBetween: "20px",
-    effect: "fade",
+    // loop: true,
     modules: [Navigation, Pagination],
     pagination: {
       clickable: true,
