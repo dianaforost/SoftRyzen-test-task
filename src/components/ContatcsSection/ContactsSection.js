@@ -25,9 +25,9 @@ export default function ContactsSection() {
           <h2 className="order-[-1] sm:mb-[12px] mb-[24px] uppercase sm:text-[67px] sm:leading-[81px] text-[40px] font-thin leading-[56px] tracking-[-0.04em] sm:text-[67px] md:text-[98px] md:leading-[118px] md:tracking-[-0.04em]">
             Contact <span className="font-medium">us</span>
           </h2>
-          <div className="sm:flex md:justify-between">
+          <div className="md:flex md:justify-between">
             <div className="flex flex-col gap-[24px] sm:relative sm:items-start sm:w-[535px] sm:mb-[64px] md:mb-[0] md:justify-between md:items-center">
-              <div className="flex flex-row-reverse gap-[20px] sm:pl-[30px]">
+              <div className="flex flex-row-reverse gap-[20px] sm:pl-[30px] md:pl-[82px]">
                 <p className="pt-[3px] text-[12px] font-extralight leading-[20px] text-end md:text-[12px] md:text-start md:leading-[24px]">
                   Phone number
                 </p>
@@ -50,7 +50,7 @@ export default function ContactsSection() {
                   </li>
                 </ul>
               </div>
-              <div className="flex flex-row gap-[20px] justify-end sm:absolute sm:right-[0] md:sticky">
+              <div className="flex flex-row gap-[20px] justify-end sm:absolute sm:right-[0] md:sticky md:flex-row-reverse md:pl-[122px]">
                 <p className="pt-[3px] text-[12px] font-extralight leading-[20px] text-end md:text-[12px] md:text-start md:leading-[24px]">
                   Follow us
                 </p>
@@ -167,7 +167,7 @@ export default function ContactsSection() {
                     )}
                   </div>
                 </div>
-                <div className="sm:w-[221px] flex flex-col sm:w-[463px] md:w-[100%]">
+                <div className="flex flex-col sm:w-[463px] md:w-[100%]">
                   <div className="flex flex-col gap-[4px] mb-[16px]">
                     <label className="text-[12px] leading-[24px] font-extralight tracking-[0.2em]">
                       Message
