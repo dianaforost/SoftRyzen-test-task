@@ -2,13 +2,14 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Navigation, Pagination } from "swiper/modules";
+import { EffectFade, Navigation, Pagination } from "swiper/modules";
 import Image from "next/image";
 import firstSlider from "../../../public/img/photo/big-first-slider.jpg";
 import secondSlider from "../../../public/img/photo/second-slider.jpg";
 import thirdSlider from "../../../public/img/photo/third-slider.jpg";
 import fourthSlider from "../../../public/img/photo/fourth-slider.jpg";
 import fifthSlider from "../../../public/img/photo/fifth-slider.jpg";
+import "swiper/css/effect-fade";
 
 const sliderData = [
   {
@@ -58,7 +59,8 @@ const swiperBullets = [
 export default function SwiperSlider() {
   const swiperParams = {
     spaceBetween: "20px",
-    // loop: true,
+    effect: "fade",
+    // crossFade: true,
     modules: [Navigation, Pagination],
     pagination: {
       clickable: true,
