@@ -5,7 +5,7 @@ export default function HeroSection() {
   return (
     <section className="hero-section">
       <div className="div bg-[#020F0880]">
-        <div className="w-[100%] h-[287px] sm:h-[288px] bg-headerBg md:bg-none">
+        <div className="md:bg-headerBg md:h-[146px] md:w-[100%]">
           <Header />
           <HeroSectionContent />
         </div>

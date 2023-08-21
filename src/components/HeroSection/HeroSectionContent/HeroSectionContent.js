@@ -5,7 +5,7 @@ import BottomLeftBorder from "@/components/icons/BottomLeftBorder";
 
 export default function HeroSectionContent() {
   return (
-    <div className="container max-w-[280px] md:max-w-[1280px] sm:max-w-[704px] md:gap-[281px] md:px-[15px] flex flex-col relative pt-[76px] sm:mt-[0] mt-[36px] mx-[auto] mb-[0] sm:flex-row sm:gap-[48px] sm:pt-[66px]">
+    <div className="container z-[1] max-w-[280px] md:max-w-[1280px] sm:max-w-[704px] md:gap-[281px] md:px-[15px] flex flex-col relative pt-[76px] sm:mt-[0] mt-[36px] mx-[auto] mb-[0] sm:flex-row sm:gap-[48px] sm:pt-[66px]">
       <div className="sm:gap-[68px] sm:flex sm:flex-col">
         <h1 className="text uppercase text-white text-[40px] sm:text-[67px] sm:leading-[81px] sm:tracking-[-0.04em] md:text-[98px] md:leading-[119px] md:tracking-[-0.04em]">
           <span className="title font-bold">Uncover</span> carpathian’s secrets
