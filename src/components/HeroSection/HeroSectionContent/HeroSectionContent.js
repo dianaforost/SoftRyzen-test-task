@@ -1,7 +1,9 @@
+"use client";
 import TopLeftBorder from "@/components/icons/TopLeftBorder";
 import TopRightBorder from "@/components/icons/TopRightBorder";
 import BottomRightBorder from "@/components/icons/BottomRightBorder";
 import BottomLeftBorder from "@/components/icons/BottomLeftBorder";
+import { Link } from "react-scroll";
 
 export default function HeroSectionContent() {
   return (
@@ -15,7 +17,7 @@ export default function HeroSectionContent() {
         </p>
       </div>
       <div className="cont order-[0] md:flex md:flex-col md:justify-between">
-        <h2 className="flex flex-col  sm:sticky absolute top-[0] right-[0] items-end uppercase text-white text-[37px]">
+        <h2 className="flex flex-col  sm:relative absolute top-[0] right-[0] items-end uppercase text-white text-[37px]">
           <span className="relative">
             <span className="font-bold text-[37px] sm:text-[67px] md:text-[98px]">
               7
@@ -34,16 +36,20 @@ export default function HeroSectionContent() {
             Carpathians. Enjoy stunning views, exciting expeditions, and the
             best service!
           </p>
-          <a
-            href="#contacts"
+          <Link
+            to="contacts"
+            spy={true}
+            smooth={true}
+            duration={700}
             className="text-center uppercase text-white font-bold text-[18px] leading-[48px] bg-buttonBg w-[100%] relative sm:leading-[22px] sm:py-[14px] md:py-[16px] md:text-[32px] md:leading-[39px]"
+            activeClass="active"
           >
             Join now
             <TopLeftBorder className="absolute top-0 left-0" />
             <TopRightBorder className="absolute top-0 right-0" />
             <BottomRightBorder className="absolute bottom-0 right-0" />
             <BottomLeftBorder className="absolute bottom-0 left-0" />
-          </a>
+          </Link>
         </div>
       </div>
     </div>

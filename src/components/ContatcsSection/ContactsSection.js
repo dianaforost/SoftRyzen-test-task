@@ -33,10 +33,20 @@ export default function ContactsSection() {
                 </p>
                 <ul>
                   <li className="font-normal text-[14px] leading-[24px] sm:text-[16px]">
-                    +38 (098) 12 34 567
+                    <a
+                      href="tel: +38 (098) 12 34 567"
+                      className="hover:border-b-[1px] hover:border-white hover:pb-[1px]"
+                    >
+                      +38 (098) 12 34 567
+                    </a>
                   </li>
                   <li className="font-normal text-[14px] leading-[24px] sm:text-[16px]">
-                    +38 (073) 12 34 567
+                    <a
+                      href="tel: +38 (073) 12 34 567"
+                      className="hover:border-b-[1px] hover:border-white hover:pb-[1px]"
+                    >
+                      +38 (073) 12 34 567
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -46,7 +56,12 @@ export default function ContactsSection() {
                 </p>
                 <ul>
                   <li className="font-normal text-[14px] leading-[24px] sm:text-[16px]">
-                    support@carptravel.com
+                    <a
+                      href="mailto: support@carptravel.com"
+                      className="hover:border-b-[1px] hover:border-white hover:pb-[1px]"
+                    >
+                      support@carptravel.com
+                    </a>
                   </li>
                 </ul>
               </div>

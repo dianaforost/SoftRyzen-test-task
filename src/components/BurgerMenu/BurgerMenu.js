@@ -25,9 +25,9 @@ export default function BurgerMenu() {
         Menu
       </button>
       <div className={`class w-[100vw] h-[100vh] ${isOpen ? "isOpen" : ""}`}>
-        <div className="p-[20px] ">
+        <div className="container z-[1] max-w-[280px] flex flex-col relative mt-[36px] mx-[auto] mb-[0]">
           <button
-            className="close-button uppercase pt-[23px]"
+            className="close-button uppercase pt-[10px]"
             onClick={toggleMenu}
           >
             Close

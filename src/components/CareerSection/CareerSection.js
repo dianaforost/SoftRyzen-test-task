@@ -1,4 +1,5 @@
 "use client";
+import { useState } from "react";
 import CheckBox from "../icons/CheckBox";
 import CrossIcon from "../icons/CrossIcon";
 import Icon from "../icons/Icon";
@@ -39,10 +40,12 @@ export default function CareerSection() {
       text: "Unleash your potential through unforgettable projects showcasing Carpathian beauty.",
     },
   ];
+
   const onSubmit = (data) => {
     console.log(data);
     reset();
   };
+
   return (
     <section className="fourth-section" id="career">
       <div className="div relative bg-[#020F08BF]">
@@ -212,7 +215,7 @@ export default function CareerSection() {
                   <textarea
                     className="bg-[#FFFFFF0D] py-[2px] px-[8px] focus:bg-[#FFFFFF1A] focus:outline-none sm:mb-[9px] md:w-[292px] md:h-[268px]"
                     rows={8}
-                    {...register("message", {})}
+                    {...register("message", { required: false })}
                   ></textarea>
                 </div>
                 <div className="flex flex-row gap-[4px] top-[16px] relative mb-[16px] sm:absolute sm:top-[355px] sm:left-[-5px] sm:w-[222px] sm:top-[357px] sm:mb-[0] md:top-[418px] md:w-[258px]">
@@ -221,6 +224,7 @@ export default function CareerSection() {
                     type="checkbox"
                     name="checkbox"
                     id="checkbox"
+                    {...register("confirm", { required: true })}
                   ></input>
                   <CheckBox
                     className={"checkbox-icon absolute top-[5px] left-[5px]"}
@@ -231,6 +235,13 @@ export default function CareerSection() {
                   <label className="pl-[32px] text-[12px] leading-[22px]">
                     I confirm my consent to the processing of personal data.
                   </label>
+                  {errors.confirm && (
+                    <>
+                      <span className="right-[0] top-[50px] text-[#FF5757] left-[0] md:right-[0] absolute md:top-[53px] text-[12px] leading-[24px] font-extralight tracking-[0.2em]">
+                        Please confirm.
+                      </span>
+                    </>
+                  )}
                 </div>
                 <button
                   className="self-end uppercase text-[30px] font-medium leading-[36px] text-end sm:flex sm:ml-[auto]"
