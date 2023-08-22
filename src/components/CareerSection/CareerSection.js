@@ -35,7 +35,7 @@ export default function CareerSection() {
               </li>
             ))}
           </ul>
-          <div className="z-[1] sm:absolute sm:top-[230px] sm:right-[0] sm:w-[463px] md:left-[650px] md:w-[630px]">
+          <div className="z-[1] sm:absolute sm:top-[230px] sm:right-[0] sm:w-[463px] md:left-[650px] md:w-[630px] absolute top-[52%]">
             <p className="sm:inline-block mb-[24px] ml-[auto] text-[14px] leading-[20px] font-extralight w-[179px] sm:w-[221px] sm:text-[13px] sm:text-justify md:mb-[14px] md:text-[17px] md:leading-[24px] md:w-[234px]">
               Don`t miss your opportunity! Fill out the form right now and join
               our team!
