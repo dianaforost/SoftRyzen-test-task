@@ -9,14 +9,24 @@ export default function BurgerMenu() {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
+  const closeMenuOnEscape = (event) => {
+    if (event.key === "Escape") {
+      setIsOpen(false);
+    }
+  };
+
   useEffect(() => {
     if (isOpen) {
       document.body.classList.add("no-scroll");
+      window.addEventListener("keydown", closeMenuOnEscape);
     } else {
       document.body.classList.remove("no-scroll");
+      window.removeEventListener("keydown", closeMenuOnEscape);
     }
     return () => {
       document.body.classList.remove("no-scroll");
+      window.removeEventListener("keydown", closeMenuOnEscape);
     };
   }, [isOpen]);
 
