@@ -10,12 +10,12 @@ export default function BurgerMenu() {
   };
   useEffect(() => {
     if (isOpen) {
-      document.body.style.overflow = "hidden";
+      document.body.classList.add("no-scroll");
     } else {
-      document.body.style.overflow = "auto";
+      document.body.classList.remove("no-scroll");
     }
     return () => {
-      document.body.style.overflow = "auto";
+      document.body.classList.remove("no-scroll");
     };
   }, [isOpen]);
 
@@ -25,7 +25,7 @@ export default function BurgerMenu() {
         Menu
       </button>
       <div
-        className={`mobile-menu bg-[#010a05bf] fixed w-[100vw] h-[100vh] z-[999] top-[0] left-[0] backdrop-blur-[15px] sm:hidden w-[100vw] h-[100vh] ${
+        className={`mobile-menu bg-[#010a05bf] fixed w-[100vw] h-[100vh] z-[999] top-[0] left-[0] backdrop-blur-[15px] sm:hidden ${
           isOpen ? "isOpen" : ""
         }`}
       >

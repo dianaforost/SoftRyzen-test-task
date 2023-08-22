@@ -6,14 +6,7 @@ import "swiper/css/pagination";
 import { EffectFade, Navigation, Pagination } from "swiper/modules";
 import Image from "next/image";
 import "swiper/css/effect-fade";
-
-const swiperBullets = [
-  "ATVs Traveling",
-  "Rock climbing",
-  "Hot air ballooning",
-  "Skydiving",
-  "Rafting",
-];
+import { swiperBullets } from "./swiperBullets";
 export default function SwiperSlider({ handleSlideChange, sliderData }) {
   const swiperParams = {
     spaceBetween: "20px",
