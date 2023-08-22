@@ -7,6 +7,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      textColor: {
+        formErrorColor: "#FF5757",
+        grayColor: "#FFFFFF33",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
@@ -15,6 +19,13 @@ module.exports = {
           "linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1))",
         headerBg:
           "linear-gradient(180deg, #001826 0%, rgba(0, 37, 49, 0) 100%)",
+      },
+      backgroundColor: {
+        bgColor: "#020F08BF",
+        menuColor: "#010a05bf",
+        inputBg: "#FFFFFF0D",
+        inputFocusBg: "#FFFFFF1A",
+        buttonBg: "#FFFFFF33",
       },
       screens: {
         xs: "320px",

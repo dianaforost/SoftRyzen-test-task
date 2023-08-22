@@ -37,7 +37,7 @@ export default function ContactsForm() {
             })}
             className={`${
               errors.fullName ? "text-red-500" : ""
-            } bg-[#FFFFFF0D] pr-[5px] md:py-[2px] md:text-[20px] md:leading-[24px] text-[13px] leading-[24px] font-extralight pl-[8px] focus:bg-[#FFFFFF1A] focus:outline-none`}
+            } bg-inputBg pr-[5px] md:py-[2px] md:text-[20px] md:leading-[24px] text-[13px] leading-[24px] font-extralight pl-[8px] focus:bg-inputFocusBg focus:outline-none`}
           ></input>
           {errors.fullName && (
             <>
@@ -48,7 +48,7 @@ export default function ContactsForm() {
                 width={18}
                 height={18}
               />
-              <span className="right-[0] top-[50px] text-[#FF5757] pl-[19px] md:right-[0] absolute md:top-[53px] text-[12px] leading-[24px] font-extralight tracking-[0.2em]">
+              <span className="right-[0] top-[50px] text-formErrorColor pl-[19px] md:right-[0] absolute md:top-[53px] text-[12px] leading-[24px] font-extralight tracking-[0.2em]">
                 Incorrect name
               </span>
             </>
@@ -72,7 +72,7 @@ export default function ContactsForm() {
             })}
             className={`${
               errors.email ? "text-red-500" : ""
-            } bg-[#FFFFFF0D] pr-[5px] md:py-[2px] md:text-[20px] md:leading-[24px] text-[13px] leading-[24px] font-extralight pl-[8px] focus:bg-[#FFFFFF1A] focus:outline-none`}
+            } bg-inputBg pr-[5px] md:py-[2px] md:text-[20px] md:leading-[24px] text-[13px] leading-[24px] font-extralight pl-[8px] focus:bg-inputFocusBg focus:outline-none`}
           ></input>
           {errors.email && (
             <>
@@ -83,7 +83,7 @@ export default function ContactsForm() {
                 width={18}
                 height={18}
               />
-              <span className="right-[0] top-[50px] text-[#FF5757] absolute md:right-[0] md:pl-[19px] md:top-[53px] text-[12px] leading-[24px] font-extralight tracking-[0.2em]">
+              <span className="right-[0] top-[50px] text-formErrorColor absolute md:right-[0] md:pl-[19px] md:top-[53px] text-[12px] leading-[24px] font-extralight tracking-[0.2em]">
                 Invalid email
               </span>
             </>
@@ -96,7 +96,7 @@ export default function ContactsForm() {
             Message
           </label>
           <textarea
-            className="bg-[#FFFFFF0D] py-[2px] px-[8px] focus:bg-[#FFFFFF1A] focus:outline-none sm:mb-[9px] md:w-[607px] md:h-[268px]"
+            className="bg-inputBg py-[2px] px-[8px] focus:bg-inputFocusBg focus:outline-none sm:mb-[9px] md:w-[607px] md:h-[268px]"
             rows={8}
             {...register("message", {})}
           ></textarea>

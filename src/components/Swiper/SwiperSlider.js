@@ -42,7 +42,7 @@ export default function SwiperSlider({ handleSlideChange, sliderData }) {
           return (
             <SwiperSlide key={index}>
               <div className="swiper-content h-[100dvh]">
-                <p className="text-[43px] font-thin text-[#FFFFFF33] text-end mb-[16px] sm:text-[67px] sm:leading-[78px] sm:top-[-140px] sm:absolute sm:right-[0]">
+                <p className="text-[43px] font-thin text-grayColor text-end mb-[16px] sm:text-[67px] sm:leading-[78px] sm:top-[-140px] sm:absolute sm:right-[0]">
                   <span className="font-extralight text-white">{month}/</span>
                   {day}
                 </p>

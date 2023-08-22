@@ -26,7 +26,7 @@ export default function BurgerMenu() {
         Menu
       </button>
       <div
-        className={`mobile-menu bg-[#010a05bf] fixed w-[100vw] h-[100vh] z-[999] top-[0] left-[0] backdrop-blur-[15px] sm:hidden ${
+        className={`mobile-menu bg-menuColor fixed w-[100vw] h-[100vh] z-[999] top-[0] left-[0] backdrop-blur-[15px] sm:hidden ${
           isOpen ? "isOpen" : ""
         }`}
       >

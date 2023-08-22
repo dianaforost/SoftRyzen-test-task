@@ -4,7 +4,7 @@ export default function AboutSection() {
       className="about-section w-[100%] max-w-[100%] h-[100dvh] bg-cover bg-no-repeat"
       id="about"
     >
-      <div className="div relative bg-[#020F08BF] w-[100%] h-[100%]">
+      <div className="div relative bg-bgColor w-[100%] h-[100%]">
         <div className="container md:h-[100vh] z-[1] sm:block sd:max-w-[440px] sm:max-w-[704px] md:max-w-[1280px] max-w-[280px] text-white md:gap-[281px] md:px-[15px] flex flex-col relative pt-[55px] sm:pt-[64px] md:pt-[80px] sm:mt-[0] mx-[auto] mb-[0] sm:flex-row sm:gap-[48px] sm:pt-[66px]">
           <h2 className="uppercase text-[40px] font-thin leading-[56px] tracking-[-0.04em] mb-[8px] sm:text-[67px] md:text-[98px] md:leading-[118px] md:tracking-[-0.04em]">
             Who <span className="font-medium">we are</span>

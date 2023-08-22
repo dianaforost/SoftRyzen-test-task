@@ -8,7 +8,7 @@ export default function CareerSection() {
       className="career-section w-[100%] max-w-[100%] h-[200dvh] bg-repeat-y sm:h-[100dvh] sm:bg-cover sm:bg-no-repeat"
       id="career"
     >
-      <div className="div relative bg-[#020F08BF] w-[100%] h-[100%]">
+      <div className="div relative bg-bgColor w-[100%] h-[100%]">
         <div className="container sm:gap-[0] sm:flex-col h-[200dvh] text-white max-w-[280px] sm:max-w-[704px] md:max-w-[1280px] md:gap-[23px] md:px-[15px] flex flex-col relative pt-[54px] sm:mt-[0] sm:pt-[64px] md:pt-[80px] mx-[auto] mb-[0] sm:flex-row">
           <h2 className="order-[-1] sm:mb-[12px] mb-[24px] uppercase sm:text-[67px] sm:leading-[81px] text-[40px] font-thin leading-[56px] tracking-[-0.04em] sm:text-[67px] md:text-[98px] md:leading-[118px] md:tracking-[-0.04em]">
             Choose <span className="font-medium">us</span>

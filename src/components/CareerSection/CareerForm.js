@@ -30,7 +30,7 @@ export default function CareerForm() {
         <div className="flex flex-col gap-[4px] relative sm:sticky">
           <label
             className={`${
-              errors.fullName ? "text-red-500" : ""
+              errors.fullName ? "text-formErrorColor" : ""
             } text-[12px] leading-[24px] font-extralight tracking-[0.2em] `}
           >
             Full name
@@ -43,8 +43,8 @@ export default function CareerForm() {
               minLength: 2,
             })}
             className={`${
-              errors.fullName ? "text-red-500" : ""
-            } bg-[#FFFFFF0D] pr-[5px] md:py-[2px] md:text-[20px] md:leading-[24px] text-[13px] leading-[24px] font-extralight pl-[8px] focus:bg-[#FFFFFF1A] focus:outline-none`}
+              errors.fullName ? "text-formErrorColor" : ""
+            } bg-inputBg pr-[5px] md:py-[2px] md:text-[20px] md:leading-[24px] text-[13px] leading-[24px] font-extralight pl-[8px] focus:bg-inputFocusBg focus:outline-none`}
           ></input>
           {errors.fullName && (
             <>
@@ -55,7 +55,7 @@ export default function CareerForm() {
                 width={18}
                 height={18}
               />
-              <span className="right-[0] top-[50px] text-[#FF5757] pl-[19px] md:right-[0] absolute md:top-[53px] text-[12px] leading-[24px] font-extralight tracking-[0.2em]">
+              <span className="right-[0] top-[50px] text-formErrorColor pl-[19px] md:right-[0] absolute md:top-[53px] text-[12px] leading-[24px] font-extralight tracking-[0.2em]">
                 Incorrect name
               </span>
             </>
@@ -64,7 +64,7 @@ export default function CareerForm() {
         <div className="flex flex-col gap-[4px] relative sm:sticky">
           <label
             className={`${
-              errors.email ? "text-red-500" : ""
+              errors.email ? "text-formErrorColor" : ""
             }  text-[12px] leading-[24px] font-extralight tracking-[0.2em]`}
           >
             E-mail
@@ -78,8 +78,8 @@ export default function CareerForm() {
               pattern: /([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})/i,
             })}
             className={`${
-              errors.email ? "text-red-500" : ""
-            } bg-[#FFFFFF0D] pr-[5px] md:py-[2px] md:text-[20px] md:leading-[24px] text-[13px] leading-[24px] font-extralight pl-[8px] focus:bg-[#FFFFFF1A] focus:outline-none`}
+              errors.email ? "text-formErrorColor" : ""
+            } bg-inputBg pr-[5px] md:py-[2px] md:text-[20px] md:leading-[24px] text-[13px] leading-[24px] font-extralight pl-[8px] focus:bg-inputFocusBg focus:outline-none`}
           ></input>
           {errors.email && (
             <>
@@ -90,7 +90,7 @@ export default function CareerForm() {
                 width={18}
                 height={18}
               />
-              <span className="right-[0] top-[50px] text-[#FF5757] absolute md:right-[0] md:pl-[19px] md:top-[53px] text-[12px] leading-[24px] font-extralight tracking-[0.2em]">
+              <span className="right-[0] top-[50px] text-formErrorColor absolute md:right-[0] md:pl-[19px] md:top-[53px] text-[12px] leading-[24px] font-extralight tracking-[0.2em]">
                 Invalid email
               </span>
             </>
@@ -104,13 +104,13 @@ export default function CareerForm() {
             type="text"
             placeholder="Movie maker"
             {...register("position", {})}
-            className="bg-[#FFFFFF0D] pr-[5px] md:py-[2px] md:text-[20px] md:leading-[24px] text-[13px] leading-[24px] font-extralight pl-[8px] focus:bg-[#FFFFFF1A] focus:outline-none"
+            className="bg-inputBg pr-[5px] md:py-[2px] md:text-[20px] md:leading-[24px] text-[13px] leading-[24px] font-extralight pl-[8px] focus:bg-inputFocusBg focus:outline-none"
           ></input>
         </div>
         <div className="flex flex-col gap-[4px] relative sm:sticky">
           <label
             className={`${
-              errors.tel ? "text-red-500" : ""
+              errors.tel ? "text-formErrorColor" : ""
             } text-[12px] leading-[24px] font-extralight tracking-[0.2em]`}
           >
             Phone
@@ -126,8 +126,8 @@ export default function CareerForm() {
               minLength: 15,
             })}
             className={`${
-              errors.tel ? "text-red-500" : ""
-            } bg-[#FFFFFF0D] pl-[48px] pr-[5px] md:py-[2px] md:text-[20px] md:leading-[24px] text-[13px] leading-[24px] font-extralight md:pl-[60px] focus:bg-[#FFFFFF1A] focus:outline-none`}
+              errors.tel ? "text-formErrorColor" : ""
+            } bg-inputBg pl-[48px] pr-[5px] md:py-[2px] md:text-[20px] md:leading-[24px] text-[13px] leading-[24px] font-extralight md:pl-[60px] focus:bg-inputFocusBg focus:outline-none`}
           />
           {errors.tel && (
             <>
@@ -138,7 +138,7 @@ export default function CareerForm() {
                 width={18}
                 height={18}
               />
-              <span className="right-[0] top-[50px] text-[#FF5757] md:right-[0] absolute md:top-[53px] text-[12px] leading-[24px] font-extralight tracking-[0.2em]">
+              <span className="right-[0] top-[50px] text-formErrorColor md:right-[0] absolute md:top-[53px] text-[12px] leading-[24px] font-extralight tracking-[0.2em]">
                 Incorrect phone
               </span>
             </>
@@ -154,7 +154,7 @@ export default function CareerForm() {
             Message
           </label>
           <textarea
-            className="bg-[#FFFFFF0D] py-[2px] px-[8px] focus:bg-[#FFFFFF1A] focus:outline-none sm:mb-[9px] md:w-[292px] md:h-[268px]"
+            className="bg-inputBg py-[2px] px-[8px] focus:bg-inputFocusBg focus:outline-none sm:mb-[9px] md:w-[292px] md:h-[268px]"
             rows={8}
             {...register("message", { required: false })}
           ></textarea>
@@ -180,7 +180,7 @@ export default function CareerForm() {
           </label>
           {errors.confirm && (
             <>
-              <span className="right-[0] top-[50px] text-[#FF5757] left-[0] md:right-[0] absolute md:top-[53px] text-[12px] leading-[24px] font-extralight tracking-[0.2em]">
+              <span className="right-[0] top-[50px] text-formErrorColor left-[0] md:right-[0] absolute md:top-[53px] text-[12px] leading-[24px] font-extralight tracking-[0.2em]">
                 Please confirm.
               </span>
             </>
