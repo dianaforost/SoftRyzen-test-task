@@ -18,29 +18,18 @@ export default function GallerySection() {
             Our <span className="font-medium">gallery</span>
           </h2>
           <div className="sm:hidden flex flex-col gap-[24px]">
-            <Image
-              src={left}
-              className=""
-              alt="Photo"
-              width={280}
-              height={187}
-            />
-            <Image
-              src={central}
-              className=""
-              alt="Photo"
-              width={280}
-              height={187}
-            />
-            <Image
-              src={right}
-              className=""
-              alt="Photo"
-              width={280}
-              height={187}
-            />
+            {swiperArray.map((swiper, index) => (
+              <Image
+                key={index}
+                src={swiper}
+                className=""
+                alt="Photo"
+                width={280}
+                height={187}
+              />
+            ))}
           </div>
-          <ImageSlider className={""} images={swiperArray} />
+          <ImageSlider images={swiperArray} />
         </div>
       </div>
     </section>
