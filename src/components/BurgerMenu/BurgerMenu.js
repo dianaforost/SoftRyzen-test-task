@@ -24,10 +24,14 @@ export default function BurgerMenu() {
       <button className="menu-button sm:hidden uppercase" onClick={toggleMenu}>
         Menu
       </button>
-      <div className={`class w-[100vw] h-[100vh] ${isOpen ? "isOpen" : ""}`}>
+      <div
+        className={`mobile-menu bg-[#010a05bf] fixed w-[100vw] h-[100vh] z-[999] top-[0] left-[0] backdrop-blur-[15px] sm:hidden w-[100vw] h-[100vh] ${
+          isOpen ? "isOpen" : ""
+        }`}
+      >
         <div className="container z-[1] max-w-[280px] flex flex-col relative mt-[36px] mx-[auto] mb-[0]">
           <button
-            className="close-button uppercase pt-[10px]"
+            className="close-button uppercase pt-[10px] text-[14px] font-normal leading-[17px] tracking-[0.1em] absolute right-[20px]"
             onClick={toggleMenu}
           >
             Close
@@ -37,29 +41,45 @@ export default function BurgerMenu() {
               <li>
                 <a
                   href="#about"
-                  className="link font-normal"
+                  className="link text-[18px] font-normal leading-[22px] tracking-[0.1em]"
                   onClick={toggleMenu}
                 >
                   About
                 </a>
               </li>
               <li>
-                <a href="#services" className="link" onClick={toggleMenu}>
+                <a
+                  href="#services"
+                  className="link text-[18px] font-normal leading-[22px] tracking-[0.1em]"
+                  onClick={toggleMenu}
+                >
                   Services
                 </a>
               </li>
               <li>
-                <a href="#career" className="link" onClick={toggleMenu}>
+                <a
+                  href="#career"
+                  className="link text-[18px] font-normal leading-[22px] tracking-[0.1em]"
+                  onClick={toggleMenu}
+                >
                   Career
                 </a>
               </li>
               <li>
-                <a href="#gallery" className="link" onClick={toggleMenu}>
+                <a
+                  href="#gallery"
+                  className="link text-[18px] font-normal leading-[22px] tracking-[0.1em]"
+                  onClick={toggleMenu}
+                >
                   Gallery
                 </a>
               </li>
               <li>
-                <a href="#contacts" className="link" onClick={toggleMenu}>
+                <a
+                  href="#contacts"
+                  className="link text-[18px] font-normal leading-[22px] tracking-[0.1em]"
+                  onClick={toggleMenu}
+                >
                   Contacts
                 </a>
               </li>

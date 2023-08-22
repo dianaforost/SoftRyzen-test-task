@@ -1,8 +1,11 @@
 export default function AboutSection() {
   return (
-    <section className="sec-section" id="about">
-      <div className="div relative bg-[#020F08BF]">
-        <div className="container z-[1] sm:block sd:max-w-[440px] sm:max-w-[704px] md:max-w-[1280px] max-w-[280px] text-white md:gap-[281px] md:px-[15px] flex flex-col relative pt-[55px] sm:pt-[64px] md:pt-[80px] sm:mt-[0] mx-[auto] mb-[0] sm:flex-row sm:gap-[48px] sm:pt-[66px]">
+    <section
+      className="about-section w-[100%] max-w-[100%] h-[100dvh] bg-cover bg-no-repeat"
+      id="about"
+    >
+      <div className="div relative bg-[#020F08BF] w-[100%] h-[100%]">
+        <div className="container md:h-[100vh] z-[1] sm:block sd:max-w-[440px] sm:max-w-[704px] md:max-w-[1280px] max-w-[280px] text-white md:gap-[281px] md:px-[15px] flex flex-col relative pt-[55px] sm:pt-[64px] md:pt-[80px] sm:mt-[0] mx-[auto] mb-[0] sm:flex-row sm:gap-[48px] sm:pt-[66px]">
           <h2 className="uppercase text-[40px] font-thin leading-[56px] tracking-[-0.04em] mb-[8px] sm:text-[67px] md:text-[98px] md:leading-[118px] md:tracking-[-0.04em]">
             Who <span className="font-medium">we are</span>
           </h2>
@@ -23,7 +26,7 @@ export default function AboutSection() {
               unforgettable memories.
             </p>
           </div>
-          <div className="sm:absolute sm:w-[100%] sm:top-[450px] md:top-[648px] md:flex md:flex-row-reverse md:justify-between">
+          <div className="sm:absolute sm:w-[100%] sm:top-[450px] md:top-[648px] md:flex md:flex-row-reverse md:justify-between md:w-[1230px]">
             <div className="flex flex-col items-end mb-[40px] sm:items-start md:inline-block md:w-[296px]">
               <p className="font-normal text-[14px] w-[180px] uppercase sm:text-[16px] sm:w-[221px]">
                 From vacationers{" "}

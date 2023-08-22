@@ -4,19 +4,19 @@ import TopRightBorder from "@/components/icons/TopRightBorder";
 import BottomRightBorder from "@/components/icons/BottomRightBorder";
 import BottomLeftBorder from "@/components/icons/BottomLeftBorder";
 import { Link } from "react-scroll";
-
+import { renderedString } from "./citiesArray";
 export default function HeroSectionContent() {
   return (
     <div className="container z-[1] max-w-[280px] md:max-w-[1280px] sm:max-w-[704px] md:gap-[281px] md:px-[15px] flex flex-col relative pt-[76px] sm:mt-[0] mt-[36px] mx-[auto] mb-[0] sm:flex-row sm:gap-[48px] sm:pt-[66px]">
       <div className="sm:gap-[68px] sm:flex sm:flex-col">
-        <h1 className="text uppercase text-white text-[40px] sm:text-[67px] sm:leading-[81px] sm:tracking-[-0.04em] md:text-[98px] md:leading-[119px] md:tracking-[-0.04em]">
-          <span className="title font-bold">Uncover</span> carpathian’s secrets
+        <h1 className="font-thin uppercase text-white text-[40px] sm:text-[67px] sm:leading-[81px] sm:tracking-[-0.04em] md:text-[98px] md:leading-[119px] md:tracking-[-0.04em]">
+          <span className="font-medium">Uncover</span> carpathian’s secrets
         </h1>
         <p className="font-extralight text-[10px] text-white w-[157px] leading-[16px] pt-[24px] sm:w-[262px] sm:text-[14px]">
-          Hoverla / Yaremche / Zakarpattia / Vorokhta / Synevyr Lake / Bukovel
+          {renderedString}
         </p>
       </div>
-      <div className="cont order-[0] md:flex md:flex-col md:justify-between">
+      <div className="order-[0] md:flex md:flex-col md:justify-between">
         <h2 className="flex flex-col  sm:relative absolute top-[0] right-[0] items-end uppercase text-white text-[37px]">
           <span className="relative">
             <span className="font-bold text-[37px] sm:text-[67px] md:text-[98px]">

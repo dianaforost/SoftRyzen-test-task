@@ -1,10 +1,10 @@
 "use client";
-import { useState } from "react";
 import CheckBox from "../icons/CheckBox";
 import CrossIcon from "../icons/CrossIcon";
-import Icon from "../icons/Icon";
+import CheckBoxIcon from "../icons/CheckBoxIcon";
 import { useForm } from "react-hook-form";
 import InputMask from "react-input-mask";
+import { whyUsList } from "./whyUsList";
 
 export default function CareerSection() {
   const {
@@ -18,28 +18,6 @@ export default function CareerSection() {
       tel: "",
     },
   });
-  const whyUsList = [
-    {
-      id: "1item",
-      title: "Professional development",
-      text: "We offer growth opportunities and a creative environment to nurture your talents.",
-    },
-    {
-      id: "2item",
-      title: "Teamwork",
-      text: "Join our close-knit family, where support and inspiration abound.",
-    },
-    {
-      id: "3item",
-      title: "Stimulating work environment",
-      text: "Flexibility and remote options for a comfortable experience.",
-    },
-    {
-      id: "4item",
-      title: "Exciting challenges",
-      text: "Unleash your potential through unforgettable projects showcasing Carpathian beauty.",
-    },
-  ];
 
   const onSubmit = (data) => {
     console.log(data);
@@ -47,8 +25,11 @@ export default function CareerSection() {
   };
 
   return (
-    <section className="fourth-section" id="career">
-      <div className="div relative bg-[#020F08BF]">
+    <section
+      className="career-section w-[100%] max-w-[100%] h-[200dvh] bg-repeat-y sm:h-[100dvh] sm:bg-cover sm:bg-no-repeat"
+      id="career"
+    >
+      <div className="div relative bg-[#020F08BF] w-[100%] h-[100%]">
         <div className="container sm:gap-[0] sm:flex-col h-[200dvh] text-white max-w-[280px] sm:max-w-[704px] md:max-w-[1280px] md:gap-[23px] md:px-[15px] flex flex-col relative pt-[54px] sm:mt-[0] sm:pt-[64px] md:pt-[80px] mx-[auto] mb-[0] sm:flex-row">
           <h2 className="order-[-1] sm:mb-[12px] mb-[24px] uppercase sm:text-[67px] sm:leading-[81px] text-[40px] font-thin leading-[56px] tracking-[-0.04em] sm:text-[67px] md:text-[98px] md:leading-[118px] md:tracking-[-0.04em]">
             Choose <span className="font-medium">us</span>
@@ -220,18 +201,20 @@ export default function CareerSection() {
                 </div>
                 <div className="flex flex-row gap-[4px] top-[16px] relative mb-[16px] sm:absolute sm:top-[355px] sm:left-[-5px] sm:w-[222px] sm:top-[357px] sm:mb-[0] md:top-[418px] md:w-[258px]">
                   <input
-                    className="w-[1px] h-[1px]"
+                    className="absolute top-[0] left-[0] whitespace-nowrap w-[24px] h-[24px] overflow-hidden border-0 p-0 cursor-pointer appearance-none z-[999]"
                     type="checkbox"
                     name="checkbox"
                     id="checkbox"
                     {...register("confirm", { required: true })}
                   ></input>
                   <CheckBox
-                    className={"checkbox-icon absolute top-[5px] left-[5px]"}
+                    className={
+                      "checkbox-icon fill-white opacity-10 absolute top-[5px] left-[5px]"
+                    }
                     width={14}
                     height={14}
                   />
-                  <Icon className={"absolute"} />
+                  <CheckBoxIcon className={"absolute"} />
                   <label className="pl-[32px] text-[12px] leading-[22px]">
                     I confirm my consent to the processing of personal data.
                   </label>

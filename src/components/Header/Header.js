@@ -5,7 +5,7 @@ import { Link } from "react-scroll";
 
 export default function Header() {
   return (
-    <header className="header pt-[36px]">
+    <header className="pt-[36px] text-white">
       <div className="container md:px-[15px] flex justify-between mx-[auto] my-[0] max-w-[280px] md:max-w-[1280px] sm:max-w-[704px]">
         <a href="#">
           <Image src="/img/Log.png" alt="Logo" width={59} height={21}></Image>
@@ -20,6 +20,7 @@ export default function Header() {
                 smooth={true}
                 duration={500}
                 activeClass="active"
+                className="cursor-pointer"
               >
                 About
               </Link>
@@ -31,6 +32,7 @@ export default function Header() {
                 smooth={true}
                 duration={500}
                 activeClass="active"
+                className="cursor-pointer"
               >
                 Services
               </Link>
@@ -42,6 +44,7 @@ export default function Header() {
                 smooth={true}
                 duration={700}
                 activeClass="active"
+                className="cursor-pointer"
               >
                 Career
               </Link>
@@ -53,6 +56,7 @@ export default function Header() {
                 smooth={true}
                 duration={700}
                 activeClass="active"
+                className="cursor-pointer"
               >
                 Gallery
               </Link>
@@ -64,6 +68,7 @@ export default function Header() {
                 smooth={true}
                 duration={700}
                 activeClass="active"
+                className="cursor-pointer"
               >
                 Contacts
               </Link>
