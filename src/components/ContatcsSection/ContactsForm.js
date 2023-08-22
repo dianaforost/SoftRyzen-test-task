@@ -1,7 +1,5 @@
 import CrossIcon from "../icons/CrossIcon";
 import { useForm } from "react-hook-form";
-import Icon from "../icons/CheckBoxIcon";
-import CheckBox from "../icons/CheckBox";
 
 export default function ContactsForm() {
   const {

@@ -7,6 +7,7 @@ import Image from "next/image";
 
 export default function GallerySection() {
   const swiperArray = [left, central, right, central];
+  const imageArray = [left, central, right];
   return (
     <section
       className="gallery-section w-[100%] max-w-[100%] h-[100dvh] bg-cover bg-no-repeat"
@@ -18,12 +19,11 @@ export default function GallerySection() {
             Our <span className="font-medium">gallery</span>
           </h2>
           <div className="sm:hidden flex flex-col gap-[24px]">
-            {swiperArray.map((swiper, index) => (
+            {imageArray.map((swiper, index) => (
               <Image
                 key={index}
                 src={swiper}
-                className=""
-                alt="Photo"
+                alt="Nature photo"
                 width={280}
                 height={187}
               />

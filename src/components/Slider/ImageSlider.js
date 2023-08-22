@@ -1,13 +1,12 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectCoverflow, Navigation } from "swiper/modules";
+import Image from "next/image";
 
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-
-import { EffectCoverflow, Navigation } from "swiper/modules";
-import Image from "next/image";
 
 export default function ImageSlider({ images }) {
   return (
@@ -37,7 +36,7 @@ export default function ImageSlider({ images }) {
             <Image
               src={image}
               className="w-[415px] h-[294px] md:mx-[auto] md:w-[606px] md:h-[429px] md:inline-block"
-              alt="Photo"
+              alt="Slider photo"
               width={415}
               height={294}
             />

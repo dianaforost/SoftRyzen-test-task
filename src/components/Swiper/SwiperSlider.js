@@ -1,12 +1,13 @@
 "use client";
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
 import { EffectFade, Navigation, Pagination } from "swiper/modules";
 import Image from "next/image";
-import "swiper/css/effect-fade";
 import { swiperBullets } from "./swiperBullets";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/effect-fade";
+
 export default function SwiperSlider({ handleSlideChange, sliderData }) {
   const swiperParams = {
     spaceBetween: "20px",
@@ -50,7 +51,7 @@ export default function SwiperSlider({ handleSlideChange, sliderData }) {
                   src={slide.image}
                   width={280}
                   height={213}
-                  alt="Photo"
+                  alt="Swiper photo"
                 />
                 <p className="swiper-title md:top-[0] md:right-[105px] text-[12px] font-extralight leading-[24px] tracking-[0.2em] text-right mb-[24px] sm:absolute sm:top-[197px] sm:left-[483px]">
                   {slide.text}

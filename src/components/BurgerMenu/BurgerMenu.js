@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { linksArray } from "./linksArray";
 
 export default function BurgerMenu() {
   const [isOpen, setIsOpen] = useState(false);
@@ -38,51 +39,17 @@ export default function BurgerMenu() {
           </button>
           <nav className="flex justify-center items-center h-[100dvh]">
             <ul className="flex flex-col gap-14 items-center">
-              <li>
-                <a
-                  href="#about"
-                  className="link text-[18px] font-normal leading-[22px] tracking-[0.1em]"
-                  onClick={toggleMenu}
-                >
-                  About
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#services"
-                  className="link text-[18px] font-normal leading-[22px] tracking-[0.1em]"
-                  onClick={toggleMenu}
-                >
-                  Services
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#career"
-                  className="link text-[18px] font-normal leading-[22px] tracking-[0.1em]"
-                  onClick={toggleMenu}
-                >
-                  Career
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#gallery"
-                  className="link text-[18px] font-normal leading-[22px] tracking-[0.1em]"
-                  onClick={toggleMenu}
-                >
-                  Gallery
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#contacts"
-                  className="link text-[18px] font-normal leading-[22px] tracking-[0.1em]"
-                  onClick={toggleMenu}
-                >
-                  Contacts
-                </a>
-              </li>
+              {linksArray.map((link, index) => (
+                <li key={index}>
+                  <a
+                    href={link.to}
+                    className="link text-[18px] font-normal leading-[22px] tracking-[0.1em]"
+                    onClick={toggleMenu}
+                  >
+                    {link.title}
+                  </a>
+                </li>
+              ))}
             </ul>
           </nav>
         </div>
