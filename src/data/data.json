@@ -1,0 +1,163 @@
+{
+  "header": {
+    "logo": "CarpTravel",
+    "links": [
+      { "to": "about", "title": "About" },
+      { "to": "services", "title": "Services" },
+      { "to": "career", "title": "Career" },
+      { "to": "gallery", "title": "Gallery" },
+      { "to": "contacts", "title": "Contacts" }
+    ]
+  },
+  "burgerMenu": [
+    { "to": "#about", "title": "About" },
+    { "to": "#services", "title": "Services" },
+    { "to": "#career", "title": "Career" },
+    { "to": "#gallery", "title": "Gallery" },
+    { "to": "#contacts", "title": "Contacts" }
+  ],
+  "hero": {
+    "title": "Uncover carpathian’s secrets",
+    "date": "7 days jouney",
+    "description": "We offer you unforgettable trips to the most beautiful parts of the Carpathians. Enjoy stunning views, exciting expeditions, and the best service!",
+    "btn": "Join now",
+    "citiesArray": [
+      "Hoverla",
+      "Yaremche",
+      "Zakarpattia",
+      "Vorokhta",
+      "Synevyr Lake",
+      "Bukovel"
+    ]
+  },
+  "about": {
+    "title": ["Who", "we are"],
+    "benefits": [
+      "From vacationers",
+      "to active travelers",
+      "we have a tour for everyone."
+    ],
+    "description": [
+      "We use methods",
+      "that are time-tested and proven. Our expert guides with in-depth knowledge of the Carpathian landscapes lead you safely through the mysteries of these mountains."
+    ],
+    "text": {
+      "first": [
+        "a team of enthusiasts",
+        "who are fully committed to the mission of creating unforgettable and extraordinary trips to the most beautiful parts of the Carpathians. Our goal is not just to show you the natural wonders of the mountains, but to provide you with a deep immersion in their magical atmosphere."
+      ],
+      "second": [
+        "We believe",
+        "that nature has the power to inspire, strengthen character and provide new perspectives. Therefore, each of our tours is aimed at unlocking your potential, enriching your spiritual world and creating unforgettable memories."
+      ]
+    }
+  },
+  "services": {
+    "title": "We offer",
+    "swiperBullets": [
+      "ATVs Traveling",
+      "Rock climbing",
+      "Hot air ballooning",
+      "Skydiving",
+      "Rafting"
+    ],
+    "slider": [
+      {
+        "date": "01/05",
+        "text": "Feel the adrenaline rush",
+        "description": "Join exciting rafting expeditions on the waterways of the Carpathians. Go through challenging waterways and overcome gusty waves, feel the adrenaline, and enjoy the incredible views of the surrounding mountains."
+      },
+      {
+        "date": "02/05",
+        "text": "Destroy your limitations",
+        "description": "Overcome the peaks of the Carpathians in a unique way - climbing. Make your own way to the heights and find inner peace in the embrace of the mighty rocks."
+      },
+      {
+        "date": "03/05",
+        "text": "Get Inspired",
+        "description": "Feel Zen over the mountain peaks! Hot air ballooning gives you incredible impressions and panoramas of the Carpathians that seem endless."
+      },
+      {
+        "date": "04/05",
+        "text": "Overcome your fears",
+        "description": "Fly in the sky over the Carpathians! Experienced instructors will help you realize your dream of free flight. Remember the incredible emotions and panoramas from a bird's eye view forever."
+      },
+      {
+        "date": "05/05",
+        "text": "Trust the flow",
+        "description": "Join exciting rafting expeditions on the waterways of the Carpathians. Go through challenging waterways and overcome gusty waves, feel the adrenaline, and enjoy the incredible views of the surrounding mountains."
+      }
+    ]
+  },
+  "career": {
+    "title": "Choose us",
+    "subtitle": "Why us ?",
+    "description": "Your chance to join our passionate team in Carpathian tourism. Seeking talented professionals to share our common mission.",
+    "formDescription": "Don`t miss your opportunity! Fill out the form right now and join our team!",
+    "whyUsList": [
+      {
+        "id": "1item",
+        "title": "Professional development",
+        "text": "We offer growth opportunities and a creative environment to nurture your talents."
+      },
+      {
+        "id": "2item",
+        "title": "Teamwork",
+        "text": "Join our close-knit family, where support and inspiration abound."
+      },
+      {
+        "id": "3item",
+        "title": "Stimulating work environment",
+        "text": "Flexibility and remote options for a comfortable experience."
+      },
+      {
+        "id": "4item",
+        "title": "Exciting challenges",
+        "text": "Unleash your potential through unforgettable projects showcasing Carpathian beauty."
+      }
+    ],
+    "form": {
+      "fullName": "Full name",
+      "fullNameInvalid": "Incorrect name",
+      "email": "E-mail",
+      "emailInvalid": "Invalid email",
+      "position": "Position",
+      "phone": "Phone",
+      "phoneNumber": "+ 38",
+      "phoneInvalid": "Incorrect phone",
+      "message": "Message",
+      "confirm": "I confirm my consent to the processing of personal data.",
+      "confirmInvalid": "Please confirm.",
+      "btn": "Send"
+    }
+  },
+  "gallery": {
+    "title": "Our gallery",
+    "slider": { "btnNext": "Next", "btnPrev": "Prev" }
+  },
+  "contacts": {
+    "title": "Contact us",
+    "contactsInfo": [
+      {
+        "type": "Phone number",
+        "numbers": ["+38 (098) 12 34 567", "+38 (073) 12 34 567"]
+      },
+      { "type": "E-mail", "emails": ["support@carptravel.com"] }
+    ],
+    "socialLinks": [
+      { "label": "facebook", "url": "https://www.facebook.com/" },
+      { "label": "instagram", "url": "https://www.instagram.com/" },
+      { "label": "youtube", "url": "https://www.youtube.com/" },
+      { "label": "tiktok", "url": "https://www.tiktok.com/explore" }
+    ],
+    "text": "Follow us",
+    "form": {
+      "fullName": "Full name",
+      "fullNameInvalid": "Incorrect name",
+      "email": "E-mail",
+      "emailInvalid": "Invalid email",
+      "message": "Message",
+      "btn": "Send"
+    }
+  }
+}

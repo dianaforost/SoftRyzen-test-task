@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 export default function CrossIcon({ className, width, height }) {
   return (
     <svg
@@ -18,3 +20,9 @@ export default function CrossIcon({ className, width, height }) {
     </svg>
   );
 }
+
+CrossIcon.propTypes = {
+  className: PropTypes.string,
+  width: PropTypes.number,
+  height: PropTypes.number,
+};

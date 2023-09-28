@@ -253,7 +253,7 @@ body {
   }
   .gallery-section .swiper-3d .swiper-slide-shadow-left,
   .gallery-section .swiper-3d .swiper-slide-shadow-right {
-    height: 294px;
+    height: 100%;
     background-image: linear-gradient(
       to left,
       rgba(0, 0, 0, 0.729),
@@ -280,12 +280,17 @@ body {
   }
   .gallery-section .swiper-3d .swiper-slide-shadow-left,
   .gallery-section .swiper-3d .swiper-slide-shadow-right {
-    height: 429px;
+    height: 100%;
   }
 
   .gallery-section .swiper-3d .swiper-slide-next img {
     display: inline-block;
+    height: auto;
   }
+}
+.swiper-3d .swiper-slide,
+.swiper-3d .swiper-cube-shadow {
+  height: max-content;
 }
 #checkbox {
   appearance: none;
@@ -314,6 +319,12 @@ body {
 .gallery-section div.container .swiper-button-next,
 .gallery-section div.container .swiper-button-prev {
   color: #fff;
+}
+.gallery-section div.container .swiper-button-next:hover,
+.gallery-section div.container .swiper-button-prev:hover,
+.gallery-section div.container .swiper-button-next:focus,
+.gallery-section div.container .swiper-button-prev:focus {
+  color: #ffffff75;
 }
 .gallery-section div.container .swiper-button-next {
   right: 55px;

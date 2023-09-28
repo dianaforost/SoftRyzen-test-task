@@ -1,10 +1,11 @@
 "use client";
-
 import { useEffect, useState } from "react";
-import { linksArray } from "./linksArray";
+
+import data from "@/data/data.json";
 
 export default function BurgerMenu() {
   const [isOpen, setIsOpen] = useState(false);
+  const { burgerMenu } = data;
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -32,7 +33,11 @@ export default function BurgerMenu() {
 
   return (
     <>
-      <button className="menu-button sm:hidden uppercase" onClick={toggleMenu}>
+      <button
+        type="button"
+        className="menu-button sm:hidden uppercase"
+        onClick={toggleMenu}
+      >
         Menu
       </button>
       <div
@@ -42,6 +47,7 @@ export default function BurgerMenu() {
       >
         <div className="container z-[1] max-w-[280px] flex flex-col relative mt-[36px] mx-[auto] mb-[0]">
           <button
+            type="button"
             className="close-button uppercase pt-[10px] text-[14px] font-normal leading-[17px] tracking-[0.1em] absolute right-[20px]"
             onClick={toggleMenu}
           >
@@ -49,7 +55,7 @@ export default function BurgerMenu() {
           </button>
           <nav className="flex justify-center items-center h-[100dvh]">
             <ul className="flex flex-col gap-14 items-center">
-              {linksArray.map((link, index) => (
+              {burgerMenu.map((link, index) => (
                 <li key={index}>
                   <a
                     href={link.to}

@@ -1,5 +1,5 @@
-import Header from "../Header/Header";
-import HeroSectionContent from "./HeroSectionContent/HeroSectionContent";
+import Header from "../../layout/Header/Header";
+import HeroSectionContent from "../../components/HeroSectionContent/HeroSectionContent";
 
 export default function HeroSection() {
   return (
