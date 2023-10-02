@@ -1,5 +1,7 @@
 import { useForm } from "react-hook-form";
+import useFormPersist from "react-hook-form-persist";
 import PropTypes from "prop-types";
+import { useState } from "react";
 
 import CrossIcon from "../icons/CrossIcon";
 
@@ -7,16 +9,36 @@ export default function ContactsForm({ form }) {
   const {
     register,
     handleSubmit,
+    watch,
+    setValue,
     reset,
     formState: { errors },
   } = useForm({
     mode: "onChange",
   });
+  const [formSubmitted, setFormSubmitted] = useState(null);
   const onSubmit = (data) => {
-    console.log(data);
-    reset();
+    if (data) {
+      console.log(data);
+      setFormSubmitted(true);
+      setTimeout(() => {
+        setFormSubmitted(null);
+      }, 3000);
+      reset();
+    } else {
+      setFormSubmitted(false);
+      setTimeout(() => {
+        setFormSubmitted(null);
+      }, 3000);
+    }
   };
+  const STORAGE_KEY = "contact_us_form";
 
+  useFormPersist(STORAGE_KEY, {
+    watch,
+    storage: typeof window !== "undefined" ? window.localStorage : "",
+    setValue,
+  });
   return (
     <form
       className="sm:flex-row flex flex-col gap-[16px] sm:gap-[20px] md:flex-col"
@@ -115,10 +137,20 @@ export default function ContactsForm({ form }) {
           ></textarea>
         </div>
         <button
-          className="self-end uppercase text-[30px] font-medium leading-[36px] text-end sm:flex sm:ml-[auto] hover:text-darkGrayColor focus:text-darkGrayColor transition duration-300"
+          className={`${
+            formSubmitted === true
+              ? "text-[#05f224] hover:text-[#039616] focus:text-[#039616]"
+              : formSubmitted === false
+              ? "text-[#f20505] hover:text-[#a80505] focus:text-[#a80505]"
+              : "text-white"
+          } self-end uppercase text-[30px] font-medium leading-[36px] text-end sm:flex sm:ml-[auto] hover:text-darkGrayColor focus:text-darkGrayColor transition duration-300`}
           type="submit"
         >
-          {form.btn}
+          {formSubmitted === true
+            ? form.btnSuccess
+            : formSubmitted === false
+            ? form.btnError
+            : form.btn}
         </button>
       </div>
     </form>

@@ -128,7 +128,9 @@
       "message": "Message",
       "confirm": "I confirm my consent to the processing of personal data.",
       "confirmInvalid": "Please confirm.",
-      "btn": "Send"
+      "btn": "Send",
+      "btnSuccess": "Sended",
+      "btnError": "Error"
     }
   },
   "gallery": {
@@ -157,7 +159,9 @@
       "email": "E-mail",
       "emailInvalid": "Invalid email",
       "message": "Message",
-      "btn": "Send"
+      "btn": "Send",
+      "btnSuccess": "Sended",
+      "btnError": "Error"
     }
   }
 }

@@ -32,7 +32,6 @@ body {
 }
 .career-section {
   background-image: url("../../public/img/mobile-fourthBg1x.jpg");
-  background-size: 100vw 100vh;
 }
 .gallery-section {
   background-image: url("../../public/img/mobile-fifthBg1x.jpg");
@@ -287,6 +286,14 @@ body {
     display: inline-block;
     height: auto;
   }
+}
+.gallery-section .swiper-3d .swiper-slide-next,
+.gallery-section .swiper-3d .swiper-slide-prev,
+.gallery-section .swiper-3d .swiper-slide-active {
+  transform: none !important;
+}
+.swiper-3d .swiper-wrapper {
+  gap: 40px;
 }
 .swiper-3d .swiper-slide,
 .swiper-3d .swiper-cube-shadow {

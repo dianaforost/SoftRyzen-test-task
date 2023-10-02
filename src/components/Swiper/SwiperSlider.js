@@ -18,9 +18,9 @@ export default function SwiperSlider({
   const swiperParams = {
     spaceBetween: "20px",
     effect: "fade",
-    fadeEffect: {
-      crossFade: true,
-    },
+    // fadeEffect: {
+    //   crossFade: true,
+    // },
     modules: [Navigation, Pagination, EffectFade],
     pagination: {
       clickable: true,
@@ -39,6 +39,7 @@ export default function SwiperSlider({
     <div className="swiper-container h-[100dvh]">
       <Swiper
         {...swiperParams}
+        effect="fade"
         onSlideChange={(swiper) => {
           handleSlideChange(swiper.realIndex);
         }}
