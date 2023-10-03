@@ -3,8 +3,7 @@ import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const BASE_URL =
-  "https://softryzen-text-task-kyspq6ekx-dianaforost.vercel.app/";
+const BASE_URL = "https://softryzen-text-task.vercel.app/";
 const TITLE = "CarpTravel";
 const DESCRIPTION = "CarpTravel Web-site";
 
