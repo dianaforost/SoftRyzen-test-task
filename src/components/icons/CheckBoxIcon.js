@@ -1,4 +1,6 @@
-export default function Icon({ className, width, height }) {
+import PropTypes from "prop-types";
+
+export default function CheckBoxIcon({ className, width, height }) {
   return (
     <svg
       className={className}
@@ -11,3 +13,9 @@ export default function Icon({ className, width, height }) {
     </svg>
   );
 }
+
+CheckBoxIcon.propTypes = {
+  className: PropTypes.string,
+  width: PropTypes.number,
+  height: PropTypes.number,
+};

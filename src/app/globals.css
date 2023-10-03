@@ -32,7 +32,6 @@ body {
 }
 .career-section {
   background-image: url("../../public/img/mobile-fourthBg1x.jpg");
-  background-size: 100vw 100vh;
 }
 .gallery-section {
   background-image: url("../../public/img/mobile-fifthBg1x.jpg");
@@ -253,7 +252,7 @@ body {
   }
   .gallery-section .swiper-3d .swiper-slide-shadow-left,
   .gallery-section .swiper-3d .swiper-slide-shadow-right {
-    height: 294px;
+    height: 100%;
     background-image: linear-gradient(
       to left,
       rgba(0, 0, 0, 0.729),
@@ -280,12 +279,25 @@ body {
   }
   .gallery-section .swiper-3d .swiper-slide-shadow-left,
   .gallery-section .swiper-3d .swiper-slide-shadow-right {
-    height: 429px;
+    height: 100%;
   }
 
   .gallery-section .swiper-3d .swiper-slide-next img {
     display: inline-block;
+    height: auto;
   }
+}
+.gallery-section .swiper-3d .swiper-slide-next,
+.gallery-section .swiper-3d .swiper-slide-prev,
+.gallery-section .swiper-3d .swiper-slide-active {
+  transform: none !important;
+}
+.swiper-3d .swiper-wrapper {
+  gap: 40px;
+}
+.swiper-3d .swiper-slide,
+.swiper-3d .swiper-cube-shadow {
+  height: max-content;
 }
 #checkbox {
   appearance: none;
@@ -314,6 +326,12 @@ body {
 .gallery-section div.container .swiper-button-next,
 .gallery-section div.container .swiper-button-prev {
   color: #fff;
+}
+.gallery-section div.container .swiper-button-next:hover,
+.gallery-section div.container .swiper-button-prev:hover,
+.gallery-section div.container .swiper-button-next:focus,
+.gallery-section div.container .swiper-button-prev:focus {
+  color: #ffffff75;
 }
 .gallery-section div.container .swiper-button-next {
   right: 55px;

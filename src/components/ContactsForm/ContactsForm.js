@@ -1,19 +1,44 @@
-import CrossIcon from "../icons/CrossIcon";
 import { useForm } from "react-hook-form";
+import useFormPersist from "react-hook-form-persist";
+import PropTypes from "prop-types";
+import { useState } from "react";
 
-export default function ContactsForm() {
+import CrossIcon from "../icons/CrossIcon";
+
+export default function ContactsForm({ form }) {
   const {
     register,
     handleSubmit,
+    watch,
+    setValue,
     reset,
     formState: { errors },
   } = useForm({
     mode: "onChange",
   });
+  const [formSubmitted, setFormSubmitted] = useState(null);
   const onSubmit = (data) => {
-    console.log(data);
-    reset();
+    if (data) {
+      console.log(data);
+      setFormSubmitted(true);
+      setTimeout(() => {
+        setFormSubmitted(null);
+      }, 3000);
+      reset();
+    } else {
+      setFormSubmitted(false);
+      setTimeout(() => {
+        setFormSubmitted(null);
+      }, 3000);
+    }
   };
+  const STORAGE_KEY = "contact_us_form";
+
+  useFormPersist(STORAGE_KEY, {
+    watch,
+    storage: typeof window !== "undefined" ? window.localStorage : "",
+    setValue,
+  });
   return (
     <form
       className="sm:flex-row flex flex-col gap-[16px] sm:gap-[20px] md:flex-col"
@@ -22,14 +47,17 @@ export default function ContactsForm() {
       <div className="sm:flex flex flex-col gap-[16px] sm:w-[222px] md:gap-[24px] md:w-[290px] sm:gap-[28px] md:flex-row md:w-[auto] md:gap-[20px]">
         <div className="flex flex-col gap-[4px] relative sm:sticky md:w-[100%]">
           <label
+            htmlFor="fullName"
             className={`${
               errors.fullName ? "text-red-500" : ""
             } text-[12px] leading-[24px] font-extralight tracking-[0.2em] `}
           >
-            Full name
+            {form.fullName}
           </label>
           <input
+            id="fullName"
             type="text"
+            autoComplete="true"
             placeholder="John Smith"
             {...register("fullName", {
               required: true,
@@ -37,7 +65,7 @@ export default function ContactsForm() {
             })}
             className={`${
               errors.fullName ? "text-red-500" : ""
-            } bg-inputBg pr-[5px] md:py-[2px] md:text-[20px] md:leading-[24px] text-[13px] leading-[24px] font-extralight pl-[8px] focus:bg-inputFocusBg focus:outline-none`}
+            } bg-inputBg pr-[5px] md:py-[2px] md:text-[20px] md:leading-[24px] text-[13px] leading-[24px] font-extralight pl-[8px] hover:bg-inputFocusBg focus:bg-inputFocusBg transition duration-300`}
           ></input>
           {errors.fullName && (
             <>
@@ -49,21 +77,24 @@ export default function ContactsForm() {
                 height={18}
               />
               <span className="right-[0] top-[50px] text-formErrorColor pl-[19px] md:right-[0] absolute md:top-[53px] text-[12px] leading-[24px] font-extralight tracking-[0.2em]">
-                Incorrect name
+                {form.fullNameInvalid}
               </span>
             </>
           )}
         </div>
         <div className="flex flex-col gap-[4px] relative sm:sticky md:w-[100%]">
           <label
+            htmlFor="email"
             className={`${
               errors.email ? "text-red-500" : ""
             }  text-[12px] leading-[24px] font-extralight tracking-[0.2em]`}
           >
-            E-mail
+            {form.email}
           </label>
           <input
             type="email"
+            id="email"
+            autoComplete="true"
             placeholder="johnsmith@email.com"
             {...register("email", {
               required: true,
@@ -72,7 +103,7 @@ export default function ContactsForm() {
             })}
             className={`${
               errors.email ? "text-red-500" : ""
-            } bg-inputBg pr-[5px] md:py-[2px] md:text-[20px] md:leading-[24px] text-[13px] leading-[24px] font-extralight pl-[8px] focus:bg-inputFocusBg focus:outline-none`}
+            } bg-inputBg pr-[5px] md:py-[2px] md:text-[20px] md:leading-[24px] text-[13px] leading-[24px] font-extralight pl-[8px] hover:bg-inputFocusBg focus:bg-inputFocusBg transition duration-300`}
           ></input>
           {errors.email && (
             <>
@@ -84,7 +115,7 @@ export default function ContactsForm() {
                 height={18}
               />
               <span className="right-[0] top-[50px] text-formErrorColor absolute md:right-[0] md:pl-[19px] md:top-[53px] text-[12px] leading-[24px] font-extralight tracking-[0.2em]">
-                Invalid email
+                {form.emailInvalid}
               </span>
             </>
           )}
@@ -92,22 +123,47 @@ export default function ContactsForm() {
       </div>
       <div className="flex flex-col sm:w-[463px] md:w-[100%]">
         <div className="flex flex-col gap-[4px] mb-[16px]">
-          <label className="text-[12px] leading-[24px] font-extralight tracking-[0.2em]">
-            Message
+          <label
+            htmlFor="message"
+            className="text-[12px] leading-[24px] font-extralight tracking-[0.2em]"
+          >
+            {form.message}
           </label>
           <textarea
-            className="bg-inputBg py-[2px] px-[8px] focus:bg-inputFocusBg focus:outline-none sm:mb-[9px] md:w-[607px] md:h-[268px]"
+            id="message"
+            className="resize-none bg-inputBg py-[2px] px-[8px] sm:mb-[9px] md:w-[607px] md:h-[268px] hover:bg-inputFocusBg focus:bg-inputFocusBg transition duration-300"
             rows={8}
             {...register("message", {})}
           ></textarea>
         </div>
         <button
-          className="self-end uppercase text-[30px] font-medium leading-[36px] text-end sm:flex sm:ml-[auto]"
+          className={`${
+            formSubmitted === true
+              ? "text-[#05f224] hover:text-[#039616] focus:text-[#039616]"
+              : formSubmitted === false
+              ? "text-[#f20505] hover:text-[#a80505] focus:text-[#a80505]"
+              : "text-white"
+          } self-end uppercase text-[30px] font-medium leading-[36px] text-end sm:flex sm:ml-[auto] hover:text-darkGrayColor focus:text-darkGrayColor transition duration-300`}
           type="submit"
         >
-          Send
+          {formSubmitted === true
+            ? form.btnSuccess
+            : formSubmitted === false
+            ? form.btnError
+            : form.btn}
         </button>
       </div>
     </form>
   );
 }
+
+ContactsForm.propTypes = {
+  form: PropTypes.shape({
+    fullName: PropTypes.string.isRequired,
+    fullNameInvalid: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired,
+    emailInvalid: PropTypes.string.isRequired,
+    message: PropTypes.string.isRequired,
+    btn: PropTypes.string.isRequired,
+  }).isRequired,
+};

@@ -1,4 +1,6 @@
-export default function TopLeftBorder({ className }) {
+import PropTypes from "prop-types";
+
+export default function BottomLeftBorder({ className }) {
   return (
     <svg
       className={className}
@@ -12,3 +14,7 @@ export default function TopLeftBorder({ className }) {
     </svg>
   );
 }
+
+BottomLeftBorder.propTypes = {
+  className: PropTypes.string,
+};
