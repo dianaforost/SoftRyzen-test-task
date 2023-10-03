@@ -9,7 +9,7 @@ export default function ContactsSection() {
 
   return (
     <section
-      className="contacts-section relative py-[55px] sm:py-[66px] md:py-[80px] w-[100%] max-w-[100%] bg-cover bg-no-repeat"
+      className="contacts-section min-h-[100dvh] relative py-[55px] sm:py-[66px] md:py-[80px] w-[100%] max-w-[100%] bg-cover bg-no-repeat"
       id="contacts"
     >
       <div className="div absolute top-[0] bg-bgColor w-[100%] h-[100%]"></div>

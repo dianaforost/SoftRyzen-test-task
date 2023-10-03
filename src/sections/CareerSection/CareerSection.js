@@ -9,7 +9,7 @@ export default function CareerSection() {
   return (
     <>
       <section
-        className="career-section relative py-[55px] sm:py-[66px] md:py-[80px] w-[100%] max-w-[100%] bg-cover bg-no-repeat sm:bg-cover sm:bg-no-repeat"
+        className="career-section min-h-[100dvh] relative py-[55px] sm:py-[66px] md:py-[80px] w-[100%] max-w-[100%] bg-cover bg-no-repeat sm:bg-cover sm:bg-no-repeat"
         id="career"
       >
         <div className="div absolute top-[0] bg-bgColor w-[100%] h-[100%]"></div>

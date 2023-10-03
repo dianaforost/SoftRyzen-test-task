@@ -33,7 +33,7 @@ export default function ServicesSection() {
 
   return (
     <section
-      className="services-section relative py-[55px] sm:py-[66px] md:py-[80px] w-[100%] max-w-[100%] bg-cover bg-no-repeat"
+      className="services-section min-h-[100dvh] relative py-[55px] sm:py-[66px] md:py-[80px] w-[100%] max-w-[100%] bg-cover bg-no-repeat"
       id="services"
       style={{
         backgroundImage: `url(${backgroundImages[currentSlideIndex].src})`,
